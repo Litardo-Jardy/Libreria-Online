@@ -1,0 +1,83 @@
+.container-list{
+    background-color: black;
+    opacity: .8;
+    color: white;
+    width: 30%;
+    z-index: 0;
+    border: 1px solid #324356;
+    border-radius: 10px;
+    margin: 5px;}
+
+@media screen and (max-width: 1006px) {
+    .container-list{
+        position: fixed;
+        right: 0;
+        min-height: 90vh;
+        width: 70%}
+    }
+
+.container-list-book{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: -20px;
+    height: 82vh;
+    overflow: auto;
+    justify-content: space-around;}
+
+
+.button{
+    color: red;
+    position: relative;
+    top: 25.5px;
+    left: 125.5px;
+    background-color: antiquewhite;
+    border: #324356;
+    width: 20px;
+    text-align: center;
+    margin: 4px;
+    cursor: pointer;}
+
+.default-text-list{
+    font-size: 30px;
+    position: relative;
+    top: 160px;
+    text-align: center;}
+
+.button-list{
+    background-color: black;
+    border: 1px solid #000;
+    height: 65px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 27px ;}
+
+.icon-list{
+    margin: 15px;}
+
+.container-number-list{
+    position: absolute;
+    color: red;
+    font-size: 15px;
+    top: 0;
+    margin-top: 4px;
+    margin-left: -3px;
+    right: 0;
+    width: 20px;
+    color: #fff;
+    border: 1px solid red;
+    border-radius: 30%;
+    background-color: red;}
+
+.number-list{
+    margin: 1px;
+    text-align: center;}
+
+.button-close-list{
+    color: red;
+    font-size: 30px;
+    position: absolute;
+    right: 0;
+    margin: 10px;
+    top: 0;
+}
