@@ -1,7 +1,6 @@
 import '../../Styles/Books.css';
 import Window from './windowBook';
 import { useDispatch, useSelector} from "react-redux";
-import { deleteBook } from '../../Features/Books/bookSlice';
 import { addList } from '../../Features/Books/listSlice';
 import { GrFormView } from 'react-icons/gr';
 import { useState } from 'react';
@@ -20,7 +19,6 @@ const useBooks = (genero, pages) => {
           state.book.pages <= pages));
     
     const handleImageClick = (id, obj) => () => {
-        dispatch(deleteBook(id));
         dispatch(addList(obj))}; 
 
     const handleIconClick = (arrayBooks,obj) => () =>{
@@ -63,10 +61,10 @@ const useBooks = (genero, pages) => {
                     onClick={handleImageClick(state.book.ISBN, state)}
                     className='button-four'> <BiSolidAddToQueue className='icon-two' size='20' /></div>
                   
-                     <img  
+                   <a href={state.book.link} > <img  
                        width="150px" 
                        height="200px" 
-                       src={state.book.cover} />
+                       src={state.book.cover} /></a> 
                   </div>))}</div>):<div className='default-text'> <p>No se encontro ningun libro</p></div>}
                   </div>);
 

@@ -1,10 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const listSlice = createSlice({
-        
+const getData = () =>{
+      let data = localStorage.getItem("Registros");
+      if(data){
+        return JSON.parse(data);
+      }else{
+        return {"library": []}}}
+
+export const listSlice = createSlice({   
        name: "list",
-       initialState: {
-               "library": []},
+       initialState: getData,
        reducers: {
           deleteList: (state, action) =>{
                 const bookIndex = state.library.findIndex( 

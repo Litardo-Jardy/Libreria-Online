@@ -31,7 +31,8 @@ const useFormulario = () => {
               <option value="Todos">Todos</option>
               <option value="Terror">Terror</option>
               <option value="Ciencia ficción">Ciencia ficción</option>
-              <option value="Zombies">Zombies</option>
+              <option value="Filosofia">Filosofia</option>
+              <option value="Fantasia">Fantasia</option>
             </select>
       </div>
     </div>);

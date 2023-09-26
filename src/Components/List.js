@@ -4,17 +4,19 @@ import { addBook } from '../Features/Books/bookSlice';
 import { deleteList } from '../Features/Books/listSlice';
 import Close from './ComponentsList/CloseList';
 import useClose from './ComponentsList/HandleButtonClose';
+import useStorage from '../Features/Books/LocalStorage';
 
 const List = (props) =>{
 
+   const {isVisible } = useClose();
    const list = useSelector(state => state.list.library);
    const dispatch = useDispatch();
+   const { updateStorage } = useStorage();
 
    const handleImageClick = (id, obj) => () => {
-      dispatch(deleteList(id));
-      dispatch(addBook(obj))}
+      dispatch(deleteList(id))}
 
-      const {isVisible, handleIconClick} = useClose();
+      updateStorage();
 
     return(
      <div className='container-list'>
@@ -30,11 +32,11 @@ const List = (props) =>{
               <div 
               className='button'
               onClick={handleImageClick(state.book.ISBN, {"book": {...state.book}})}>x</div>
-              <img 
+              <a href={state.book.link}><img 
                 width="150px" 
                 height="200px" 
                 src={state.book.cover}
-                alt={`Portada de ${state.book.title}`} />
+                alt={`Portada de ${state.book.title}`} /></a>
             </div>))}
         </div>
 

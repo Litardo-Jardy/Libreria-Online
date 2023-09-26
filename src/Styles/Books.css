@@ -31,6 +31,13 @@
    height: 200px;
    margin: 20px;}
 
+@media screen and (max-width: 470px) {
+  .image-book{
+    width: 120;
+    height: 170px;
+    margin: 18px;
+    margin-top: 50px;}}
+
 .container-book{
    display: flex;
    flex-wrap: wrap;
@@ -186,6 +193,7 @@
 
 .parrafos{
   position: relative;
+  font-size: 15px;
   top: -15px;}
 
 .container-data{
@@ -230,11 +238,7 @@
 
       .button-add-list{
         font-size: 17px;
-        width: 90%;}
-
-     }
-  
-
+        width: 90%;}}
 
 
 /*  Diseños de etiquetas generales*/

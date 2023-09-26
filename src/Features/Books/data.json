@@ -1,235 +1,448 @@
 {
                "library": [
-                   {
-                       "book": {
-                           "title": "El Señor de los Anillos",
-                           "pages": 1200,
-                           "genere": "Fantasia",
-                           "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1566425108i/33.jpg",
-                           "synopsis": "Una aventura épica en un mundo de fantasía llamado la Tierra Media.",
-                           "year": 1954,
-                           "ISBN": "978-0618640157",
-                           "author": {
-                               "name": "J.R.R. Tolkien",
-                               "otherBooks": [
-                                   "El Hobbit",
-                                   "El Silmarillion"
-                               ]
-                           }
-                       }
-                   },
-                   {
-                     "book": {
+                
+                   {"book": {
+                          "title": "El Extranjero",
+                          "pages": 123,
+                          "genere": "Filosofia",
+                          "cover": "https://http2.mlstatic.com/D_NQ_NP_901632-MLC50869092713_072022-O.webp",
+                          "synopsis": "La historia de Meursault, un hombre indiferente ante el mundo y las normas sociales, cuya vida da un giro inesperado después de un acto irracional.",
+                          "year": 1942,
+                          "link": "https://web.seducoahuila.gob.mx/biblioweb/upload/Camus,%20Albert%20-%20El%20Extranjero.pdf",
+                          "ISBN": "978-9870426053",
+                          "author": {
+                            "name": "Albert Camus",
+                            "otherBooks": [
+                              "La Peste",
+                              "La Caída"]}}},
+                      {"book": {
+                          "title": "La Peste",
+                          "pages": 320,
+                          "genere": "Filosofia",
+                          "cover": "https://static.fnac-static.com/multimedia/Images/FR/NR/2e/f9/01/129326/1507-0/tsp20191030071015/La-Peste.jpg",
+                          "synopsis": "Una novela que explora la lucha de una ciudad contra una plaga mortal y las implicaciones existenciales que enfrentan sus habitantes.",
+                          "year": 1947,
+                          "link": "https://web.seducoahuila.gob.mx/biblioweb/upload/Camus,%20Albert%20-%20La%20Peste.pdf",
+                          "ISBN": "978-9870415484",
+                          "author": {
+                            "name": "Albert Camus",
+                            "otherBooks": [
+                              "El Extranjero",
+                              "La Caída"]}}},
+                      {"book": {
+                          "title": "La Caída",
+                          "pages": 160,
+                          "genere": "Filosofia",
+                          "cover": "https://covers.alibrate.com/b/59872ea0cba2bce50c1d4024/94a571cf-3830-4266-9abb-b0efcfea3cf5/share",
+                          "synopsis": "La historia de Jean-Baptiste Clamence, un abogado que se enfrenta a un oscuro viaje interior después de un evento traumático.",
+                          "year": 1956,
+                          "link": "http://web.seducoahuila.gob.mx/biblioweb/upload/Camus,%20Albert%20-%20La%20Caida.pdf",
+                          "ISBN": "978-9870416504",
+                          "author": {
+                            "name": "Albert Camus",
+                            "otherBooks": [
+                              "El Extranjero",
+                              "La Peste"]}}},
+                      {"book": {
+                          "title": "El Hombre Rebelde",
+                          "pages": 368,
+                          "genere": "Filosofia",
+                          "cover": "https://www.polifemo.com/static/img/portadas/_visd_0000JPG01MKZ.jpg",
+                          "synopsis": "Un ensayo que explora el concepto de rebelión y su papel en la sociedad y la moralidad.",
+                          "year": 1951,
+                          "link": "https://www.solidaridadobrera.org/ateneo_nacho/libros/Albert%20Camus%20-%20El%20hombre%20rebelde.pdf",
+                          "ISBN": "978-9870413527",
+                          "author": {
+                            "name": "Albert Camus",
+                            "otherBooks": [
+                              "El Extranjero",
+                              "La Peste"]}}},
+                      {"book": {
+                          "title": "El Mito de Sísifo",
+                          "pages": 256,
+                          "genere": "Filosofia",
+                          "cover": "https://cdn.zendalibros.com/wp-content/uploads/portada-rh37940_el-mito-de-sisifo.jpg",
+                          "synopsis": "Un ensayo sobre el absurdo de la existencia humana y la búsqueda de significado en un mundo aparentemente sin sentido.",
+                          "year": 1942,
+                          "link": "https://www.correocpc.cl/sitio/doc/el_mito_de_sisifo.pdf",
+                          "ISBN": "978-9870426145",
+                          "author": {
+                            "name": "Albert Camus",
+                            "otherBooks": [
+                              "El Extranjero",
+                              "La Caída"]}}},
+                      {"book": {
+                          "title": "La Metamorfosis",
+                          "pages": 210,
+                          "genere": "Filosofia",
+                          "cover": "https://www.planetadelibros.com.ec/usuaris/libros/fotos/332/m_libros/331538_portada_la-metamorfosis__202101071915.jpg",
+                          "synopsis": "La historia de Gregor Samsa, quien se despierta un día convertido en un insecto y enfrenta el aislamiento y la alienación.",
+                          "year": 1915,
+                          "link": "https://biblioteca.org.ar/libros/1587.pdf",
+                          "ISBN": "978-9870415542",
+                          "author": {
+                            "name": "Franz Kafka",
+                            "otherBooks": [
+                              "El Proceso",
+                              "El Castillo"]}}},
+                      {"book": {
+                          "title": "El Proceso",
+                          "pages": 256,
+                          "genere": "Filosofia",
+                          "cover": "https://cicutadry.es/wp-content/uploads/2013/10/029.el-proceso.jpg",
+                          "synopsis": "La historia de Josef K., quien es arrestado y sometido a un proceso judicial absurdo en un mundo opresivo y misterioso.",
+                          "year": 1925,
+                          "link": "http://web.seducoahuila.gob.mx/biblioweb/upload/Kafka,%20Franz%20-%20El%20Proceso.pdf",
+                          "ISBN": "978-9870424562",
+                          "author": {
+                            "name": "Franz Kafka",
+                            "otherBooks": [
+                              "La Metamorfosis",
+                              "El Castillo"]}}},
+                      {"book": {
+                          "title": "El Castillo",
+                          "pages": 320,
+                          "genere": "Filosofia",
+                          "cover": "https://www.elejandria.com/covers/El_castillo-Kafka_Franz-lg.png",
+                          "synopsis": "La historia de K., quien llega a un pueblo dominado por un misterioso castillo y lucha por entender su papel y propósito.",
+                          "year": 1926,
+                          "link": "http://web.seducoahuila.gob.mx/biblioweb/upload/Kafka,%20Franz%20-%20El%20Castillo.pdf",
+                          "ISBN": "978-9870417898",
+                          "author": {
+                            "name": "Franz Kafka",
+                            "otherBooks": [
+                              "La Metamorfosis",
+                              "El Proceso"]}}},
+                      {"book": {
+                          "title": "La Condena",
+                          "pages": 112,
+                          "genere": "Filosofia",
+                          "cover": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUVFBgVFRUZGRgaGxgbGxsaGyMbGBgaGh0aGhgaGxobIS0kHB0qHxobJjklKi4xNDQ0GiM6PzoyPi0zNDEBCwsLEA8QHxISHzMqIyozMzYzNTMzPDMzMzMzMzMzMzMzMzMzMzMzNTMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM//AABEIAP8AxQMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQIDBAUGBwj/xABFEAACAQMCAwUGAgcHAgUFAAABAhEAAyESMQRBUQUiYXGBBhMyUpGhQvAHFCNisdHhVHKCo8HS8RckFjOissIVNENTkv/EABkBAAMBAQEAAAAAAAAAAAAAAAABAgMEBf/EACMRAAICAQMEAwEAAAAAAAAAAAABAhExAxIhEzJBUQQiYRT/2gAMAwEAAhEDEQA/APZaKKocXcYNgkYFROW1WNKy/RWULrfMfrSi83zH61n116HtNSissXm+Y/Wl963zH60ddeg2mnRWX75vmP1o983zH60ddeg2mpRWV79vmP1o9+3zH60ddeg2mrRWV75vmP1o983zH60ddeg2mrRWV75vmP1o983zH60ddeg2mrRWV75vmP1o9+3zH60ddeg2mrRWUL7fMaPft8x+tHXXoNpq0Vle+b5j9aPft8x+tHXXoNpq0Vle/b5j9aPft8xo669BtNWisr3zfMfrV7hCSuTOTVR1FJ0DjRYooorUkSs7jfj9BWjWdxnx+grHW7So5IAKWKKK5SgoooigAoooNACUUtIRQBlXgxLLbZ2bW2ojCJKsNGokbapETBUYxUD3rep1PFgMGUsjP8BLNc04YHTCMsAxCN41qXuCtsdTW0ZupUE/UilXhLYki2gnJ7oyepxTUkOjL4F1uTpvtJATSWz+z0HUQIKs0nUJBh4MEACvf4+2LiWzdhVKk3GfSsqETEtkFhEkmS7CDM1tnhbfeGhIYQ3dHeEkweokk+ppRw6fIuIjujECBHoAKNyCit2W6Nqa3e96p0kd4MFnU2CORn7RsABfqivH8Otz3AuWxdgAWwwDwF1Aad4058qvUmFC0lFFIYUUTRNABRFFBNABWhwPw+prPrQ4H4fU1to9xEsFqiiiusgSs7jPj9BWjWfxfx+grHW7So5IKBRRXKUFcFd7NB7YFv3t7QbX6xHvDGv3h7sbe7x8MV3tef8AG9rG32q3EHhuKZEstYOiyWLOLjHUuYKRsZ9KaNIXzXo7vi+KS3be5cOlEUsx3hVEnAyawuzfa6xeuW7fu71s3BNtrqaEuiJ7jAmcdY5day7vb/FXuF4114U9zQtpHtMGdHJDl0YkOQsmBjzrF4jijr4K4p4q+ll1LD9VCJbgLK2wltZ2iJIEDNPaCh7PTya5m57ccKGPdvNbVtLX1tk2FaYjXMnPMAzIit/i7ZuW3QHSXRlB5qWUgH0muB7P4y1b4P8AUOM4S/rQkFEtuwuHWXVrboRkmMyNqSQRimdf2x2/Z4cJrLO1z/y7dtdbuN5UDltkmm9le0VniA+gOr2xNy26FbqiJHd5z4E/esLtW2eG43h+L907WBY9yQil2sESQSozEGJ/vc4Bd2Tca/x93jltOlhLHuwXQq91gQ5KockQI9F9Ch7VRYb284TSzBL7FSQ6rbOpAN2eSAqg4ydwa1eL7f4e3w68Sz/s3ClIBLOWEqoXfVvjlBmIrjOy+KYcP2mDY4gG8990BtNJW9KIIiZBeSBMCTSFLh4Pgbi2Lrfql1fe22Qq7AaWLopywHXqTyBoaG4onbtO3xHavBOlq5baL2sXbfu3b9m+gnfUIBgyYrpu1vaW1Yue60XbtzTqa3ZTWyKfxNkAD+Y6iub7Q7YF3j+DvpY4k2rfvAzGywkupUQOgJEkxz3iou07NzhuP4i5cfibdu9oZbnDoHB0gDRclGIjMR9+TobinV+jrP8AxLw/6t+tKXa3Ok6UJdCNwy7rHM7QQdjNUrftxwjPbUC7puFVFwoRbDtEIWJ+LOYBA5nesizaS12dxZtpxT+/a6o124d3uWwusIgBFsnnHI1ndpX2bs/gbYsX9du4jOPdNgWlYOYiclxE7welFAoxO27Y9orXD3FtlLty46lhbsprfQJliJGMHnyNWux+1rXFWxctElZKkMIZWG6sORyPrXKdqdqOeNRm99YtmyptunDB77l4Y22ZkcpB3SNxnepf0eOy/rNq5buqzXnuBriFAytoXeANcgkgYpVwS48WdpTaKU1BAk1pcB8PqazAK0+A+H1NbaHcRLBaooorsIErP4z4/QVoVn8X8foKx1u0qOSCiiiuUoKJoooAJoJoooGIBSwfGvn79KPHXLnaN62zMVtlVRScKNCnA8SSZ8a42t1oWrsncfWek9DSaT4189XuzOCdLSrdFu57m09xp1AvcNpNBJcKINxmMCVCNM0//wAL8NrKDjUJ1KB8AGk/qwYsxfuke/fltZfxAfQ/Q3H0EQehog187dn9l8KU4oNcUvbfRYDuLYuDTelmgkCAqvvBICz3xWmvsxwKoyNxiNcadL6lAUKyJp0h4LMWaNRAiCSoDGjofobj3YzTc+NfMva3ZiWrdh0vrcNxNTKIm20I2kwT88ZjKNWTR0P0N59YTRqrgf0P8dcucG6uzMEuFULGdK6FOkE8gTt413s1zzW10UuRdVBNIDSzUjEomiimAAVpcB8PqazTWlwHw+prXQ7iJYLVFFFdhAlZ3GHv+grRrN434/QVjrdpUckOqlFNBp1ciKCiaDRNMAFBoNFAGH217J8Fxbh79gOwEagzIxHIEow1eu1Zh/Rv2Z/Zv825/vrr4pM090l5Ckcj/wBN+zP7N/m3P99H/Tfsv+zf5tz/AH11tFG+XthSOS/6b9mf2b/Nuf76Q/o47M/s3+Zc/wB9da1IRR1JewpHJn9HPZf9m/zbn++j/px2Z/Zv8y5/vrrDTaOpL2FIr9ndn2uHtrasoERdlH3JJyT4mTVkikigN4z/ABqG7KFAFKBQBSR0oAKWaSKBQAprS4D4PU1lO4G5A8zFaXZl1WSVYMJOQZH1Fb6GSZYLtFFFdZmJWbxvx+grSrM489/0FY6/aVHJDSimzTq4zQDRRQBTJFFLSRRFMAomiKRmA3/qfIc6AAmkmk1E7L9cfYT94qB1ZpGqPFcenMn7UUBK9yMbnoN/6CklvAeG/wB5H8KhT3ifhDjwOlp8jg/WnLxSnBlT0YaSfKcH0or0Ox2vkcH7eh/4NKRUA4kfiAIOcGTH7y8vuDFJdDFT7srMGAwkZGJ5j1mltCx9y8F3wepiPDnH3mqw4iZMKYiRgMNhO87DBgem1VrPEXFnUFXbEkCDsdWrfMdJ251K4DEQWRs4BkqTzK88wO713xVbEgsttxEDE+Tb+SuJUnzPqKdavyNQII58mXwIOP4VTkr3XAYHBEDeCdjG8HB0nxNV7dzLADSV1SQxlYHQjeIxnEbARVbExWaycSjTDqeuRPrVLtXtZLKzBdzsqwT4k5Aj1/1Izu1e0lsoHa5rZu6sCWJ3IMQAADkgY6gwK479ZBJ1aAWligZydiBgBtKAk51DetNPQvl4IlOjc7S4y651G4UB+JDctkKOrBQxXyBJnn07H2GYHhFj5n6fMflAHh6V5ta7OaSzKiAd7DkAjeI0kLBIOc74YxXpvseAOFWJjU28ZkzPdAGd8ePOulJLhEK2dBRRRQUFZfH/AB+grUrJ7Rbv+grHX7So5KxUncmOgx996UW16D+J+tNV/H/npTgf+K5NxdDdLD4Y9WJH0jHoact0j4lj1x6GKVaV0VsMAfMSPPNNMKF1np9xSPej8J+2PMzA9aj/AFO1/wDrQeSgfwpq9nWRtaQHqFE/WJqriLkg/XSWkyOQEqPXvMAT5/SpH4pROwnclgSfodvWrKWFGwjyJH8DStaB6g9Rk/UzQ5IVMos4OwZfHRonwWQT+cUqrjCuB4s/8CCPrVxbZGRBPjM/XNRvdzGkz4QY++PWKGxlbUfkP+JZ+4X/AFqK6dY0lLZHOTEHlMDf1narbOecjwAM+pA/h9aUmBAUxtAx/qKW4dGFcstZBi5KGO7IcJ4w2I5SM7b1XHFgRp2MaSshT5d4CfKPOt9A4wFQLsOR9VXB+oqle4O4A2nIO+gwWznutjPgRVxmnkTjRU/WbmmD3Zkj3i6lz0dCAOeJao/2qCCFj90ErBGNGoiBOw+mo4qS5a0cyp561BXwkkBR9/OouGMk94iZnTJgc9QBOpcjPe5eFUSWVvNcEOWDRicDPTOpR5EeMDFQcbwpYgZKqRhVnUQQQo1RJ1HY4GdtRNJe4NmdQrIy51CBCnBWSBKZBEHqYzNU+JvXbKHVBENAJKjTJDFd4OwAlgNQxJoS54B45MTtTi/e3CowFDDUs6nIJJRJgBFBBJ/htVcFkkQoJMy5VVOw7uwEHOCTmeeaT3NQVtIeBAXQunJLdSS0yZjMdKuJecoQ7GII0AAHSciDOeRAGJPLn3baVGN2XUe4FJKh4AMDvlebZUwy88kTGwiR6B7BAfqi6RALOY2iTtED89d64BPeW7a5YhSQVuD9qjDMLzKGAQ0kiFIOTXoXsMQeEBBJ7777jO2ANqgaydJRRRSLErI7SHf9B/rWvWT2hOvwgVh8jtKhkqI32/M06fDzqNQRj7zsPp+Zp+qPPP5+9cSNWSA04VCpM56/Yfn7ipVpp2JjxFKKYBSrVEjhRRSHzpgDoDv/AE9RzqO4+nljwwP5Ck95++n5/wAVGv8AeQ+tPkBjXQBOZ6bE+Anf0qFuIO4UsvUZM8wV5GnvbJyAo8jv1kaYPrVJrDW/hDR05Y2nSZ/xQfKKkou2nDTBmMeI8+hp5rJu3BcIkMIEzgMN9oGojHQioblzTI94oMfjWI6BgGUz4xH8KrYLcbD3wPHwG/ryHrWVxSK8/swRBmI1ADch/DO0xkSOUa8XcyhJJj/8bLp6RBlp5wDn6VInEa9AJQPMaT3G7oJnMh8qBGIPQwRUYVyJysjtWU+G7qGDpY4Yg51agSYI3E55yJjB9slK20QvKtIY/iWNgY3EmeXwMM4jqRca3KuvcOeunI57c4H+EfMRzXtjwjDh4AwriHI06F7y6Y5yQIjbat9J/ZGc8HJjjQSxXDEKojGlcjSBicQTtnwrZ7KBd9YuMoUgwpJc97vGJIWJMse6NUCa53sxIYwuptgCNQMzuOR/kQd667gOGaEEFhiV2LyCoUnmNzp2w42Irq1KSoyjyzreFKXkVWRYBkAnvKFJCkYlTiRnnvXSdl21W2AoAEnauN4ezdUyVOskEADSf3s5GR5xJ6COx7KDe7GoyZMmIn71xwVS4Zu8F+iiiugkSsntA98+QrWrJ7RHf9BWOv2lQyUzIEk/nl9qRXzueU9Bz3jNOYDn6U0CfrnxO8eVcBsKrZkn/jMeu/2qVCSPP8imimPcEwQ0dQCQfp9M1SQmP94BuQB44qC5xPRj07udR6AgHHjTtaEdxlzjBAHiMbYnNM4i+EzI1AGNIkqDE5zjGwiY8MXFWyWxj6mga3X8Td2TyAkRAG+M7CaiNlSQSxJ3DEsCR1AM48RAyKp3eNVgJkqTzk6z0Qfj8dIPhAqazxLyNKKgPPuNcbJ/Dr7o858ga2UWRaLysq/iUj94EkfUiR6TSPxFv51P91AfvkVVc87jao/eYR6adI9ImmhWMwltRyNxtQPWVBEfeltTFYXHsncqvi0E+o/PpVS61sZ96jZgd3THSNC9789a0LK3CJ1WiN/2YgDrnVJqE8OLneZ1jlNo/c8z64pUr5KszeIRCJFvJP7sTzcEOCu85MeFVy7WyAiORuFbGo7StzSfHB1Vqr2aB8NwFuZ0NJ8JBmB0mkPBMJm3rBmIZvCSUdSp26HempLAUzLWwtzdirjloA25M50xGIMrnqMVZHC3FEgJcK9/8SvoxrIBmW5GOoHjVko4H/l6goBB0kMgMwrHBjfMSB4U+7xKhAbTGQQSrgspiASHBOgzHODERsatuySC3xFwK0BXXdCG76kyFHwhXU9fGDXKcV28zoyNc1ow70os2mnUCoQd5JwVIkQINdfwzhm0sCrsAV2h1GJjIJAwcGII2FcL2hwoW5ctusohhYHfY3CxEMNoKvG84HORpoqLbTRM7Dsxbah+9K29RLrJLD8IOMxAPTBNaln2lsKO6XDZ3J0GRygNBYquomJIORvWf2ba0617syEJkadrgkbDbP32mqw7NYXFSbZVpYHUFVhp1LmNysEQMz610OMW3Zmm1g6/gvaq0wCs0HmpEr4FTsOpA25bV3PYPEC5a1Ag95hhtQwevXwOQccq8H411bKsrCFZlVdARmxGIg8/PV0z67+jG5q4BTM9+5vv8RqHoxj9kWpt8HYUUUUihKwu1m78d4mBttzHLbrmNq3axu0nGuCQMKd461h8jtLhkoo4ae9npMkSInB+4/nUqoRmarcTcG8iBseh2npG9VrvEACQqMOqgE79BJ2rir8ZqaJbkPU9B/zTGaBBaAOfl06mqCBjsrLPyDTjlLNE89h41XvcPLSzAKNwJuNiYBJ+Emds7dDBajeRN0WOM4wkHQNK5m43dAHhOcDn0k8qpW+F1glZ0kwbjSdX7qLuxnmcZNO94z4tWwUU4ZgFznmcDciFnpAFXOG4e6d2md4HLaJEYxt3dq2j9UZvkOF4a3bJKJDxpL/jgbLyCjnDafKrK8P5qCdt5PjqGT6Hzqxw3DlRkgYiAAP5x5SalFlZzJ8yT57mk58jogt8DOWJj5cZ6ajHe8tvOrQ4W38gnrGfrvR7lPlX6CotaglT3f3VBkjkTpExj/mlbYUh7omRBJ6Ak/XOPWmi2BsgHrDfVZ/jTRxSgQFaPAAAfUgCof8A6iNQiNOZMhpEE4g/033oqQWiV7TRkg+BGr6HH3mo1LDIXH7p1D/+WgjyFH67q+H6d2SPVsfeorvFwcEg41BtIHgSdgfGcxHk9rCydOLEhTgkgCcTO2DBHqPKapcTwyFtQ0wYEHENnPVQwMHyHUmoeIuC4CbjdyIhT9QAZBbwY5j4ahRyAfd3FYEajqBmDsxPLw3U7yIFUoNeRN2FvhARpUkfCNJwVuFjO2DBkggZAEERnnfaqyRxCHR3yEde9CubZbWJPONgMyQOYrTPHlSqswDKxyMEDVKqJkOsyRzEiRWh2jwVviUFt2IcPqS6myOBiAeR73dP1mtYtxlbwS1apHn/AAkm4S+GLq0xszjUpbquqRsdzjaulu9h271rDaOaBsgE5Ks3yzAB8ukVy3aPZV7huIFu4VBYqyuMqQG3AO3eyQR9q6fs69pXQrd7BhjqDgglhPNhPPfJxBro1W6Uoszjmmct7Rs63Da1FkLSpJy2SJaMFvPaa9U/RlaKcAgO+u5/7vzmvOe1rEXg7bsckiShViGJ5AiNv7x8a9M/R808Gvg9wdThjkk8zufE1Tf1SBL7HU0UUVBYlY3aVpS+VBwJJAPpWzWR2l8R54EVhr9pUMlAWlB7qqIOSAB6U50JJOMbTtPU0sHYY++ef3ppQ8yCMcs49fOuM2Kl9CwHenymAenxBTv+LwpEtQQAY8cE+csMdPXerapBJmSf9J5esUi2xuck749cfb6UOUqpBSBEtjaCYGTlo5ZOeVWA461EqCdhz5U/Qo6UuRcEurE0qn8/xqPXzMADriOpP2qpd4/MDuwYlvrtvMQY3zkCrjFywS+C3cvwQo+M9dlHVumx86p3OKtodIl2JzmAWjEzicDAGBmI3z+JZzK21XIli/eYxPeaNjE48MRpLCtw3Dzm2ZJIGskEMIJheRUGZPdBE77VvHTVcmbkaHEcXPxyRgAEBUH+Fj/HI9YobtEMMo7AYH7MqnprXP5imo+nKlrjnE7Eb4DLhRy0ox2mDk1IvZdy4dTsVGIUSY6kljJJ690/wFVFZDkr8Rxtwg6FgDcsvdA6gCRGdyB6iqlu+NxpJn4jJIn5VdyuYzpMGOdbdrse2kHAiYILKwPUHXH2qe5acYF0xsA4XPmYkmlvisBtZipftuw120c5E4Gqd1IJJBiYG/nzp3+Hsr37R0xq7jfErZaAuTBPzAiYI3mtfiOHdgwYgEkxCsB4d/V3RgdOoisfiLDHUlxdWmAQGBbMEFmMHVkkb5gggEKKi17E0VrqBwFOrIKFcjJBaUJM8yQsn4hByBVngOKISHgA41gA8zhiMET3lblsMGKbbVn7jSZBChsM4EFlyS2rc6Qd5IjIpnElVYMuoB/iVgZBJCkExkkkQ24O/Oa/Bfph+2183BYuMe+puWmAPwsukqd9jk+KkeMUexO0CXXV8TMApHJifiYc8rJ8z6bHanAC6GQEiYaSDCXFmA0jAYc+gztFczY4dg7KyspUojCcq2ZWPHSfLma6IbXHaQ7uzsO3eymcqyqMAlgPh0oQYAGNPPGTBmTE9j7A8GbXCC2eVy505semPpXEcX27/wBuum3cb3YAYhG0LpGktM4zyPh4z2X6Ob5ucEHIiblyBM41QM+VZRUkqeC7TfB1lFFFUMSsntD4/GB6VrVk9pfEeWBWHyO0qGSpPL8ihqQGOUzuY36n6U0uPLbfA8N64kzYKa7CMzPKNzzxFVn4v4tIkCckQoMx8RwfKeY2piOxwR/ePPr8I/CMc+fLIosdE6FyfihepAJJ5nEAQfOf4vNvEm42/OAN/ADnULMSYJMYkCBk5CyJO3Qk1DfvaAGABJ2k5AMwZO2OWT9KadukS1QnaF8Ai3bJZoB+ImPHeJH55A5tviGAi1DOROpzJAJOS06V678juQYi4niANS/G9zBkEE4yFUyWgbmSc4iRUlvgHOnWQBvpYkEkxJYJBBAAhVEjkY26o1FcmLtsfa4VTm4S/Ng0mecaMBBse9LEAQIxWotg3O+23QkaFHQnY7Cd5xtFRWLIEKTCjYBNKnrCzHjLZ860k6qhJ5M4MjywY9IpObChbCKplVLsRGo4EfKpOy+A+tPJc4n0H+uRB/xelLoY/ET5YVf/AJH604WT4est9JIj6VmyiL3C/iYeQMH6jvH871JpAHdX/wBO/wBYn61ILcfiMeHd/wDbFKLY3jP1P1OaljKrm5MyAPHYeYGY8Z+lVr/Bn4wF1gQIH7NlzKEbgGTnYb1fuJz1MIHImD6Df0ql7wj4WXPIsCIG5AHeHoTvVJ+UgZk2raXJXSA4/Dc2e38SwwzIJjUCIOSJNRXuD1qWSGYTKXPikSNJbBaVlZnlgmc6d+yrnUV0NvKnczPxBsc5kc9jVV7Z1/GCRkNPf23gYmBtgEDatk/KMzLtkQZLriHEQTyVu/OlvwERE6cAExT9puCNs+/GQQBI2edcNmYYAk+jc99u6YdGcJOlVdxEPbIK94HDCJ7wmRO0Cua7fvC9+w4dy6W1c76gWGkAjr3THMd/G2NINuSfjyS1wQ9me0PulKXAGQmTsYDMQwg/Fu2PAHqa9J9hdH6optp7tWZ2CzIEmcGBg14uEDple8uJnJ3meueRM9J2r1/9GojgVHR7g9QxBrecUuUKLeDraKKKgsSsXtN+/EE4HI6R6gHNbVZHaSyx3GBkb+H86x1+0qGTPcv0keB0Dw3lqj0NP4V6xJJJxGrB5/erBmYBz9vP71XZTsGhRueeCdieYO5M1wuRsojWSB6wDsq9SBsABPmaGvqsKCB0ncx0G55f1pHsbAEjfJyRywNgP6Yo/VUGYknEkyenp6fxqf0orniSWi2syY1ahknfbniIEcsg1E/D3GwrAHmSvdzuMGQN8jfn1OgUAiJ7uBknBx67VJP4VkQOn8J+tX1KwiXGyhw3ZLBi73DJAB0DQx5RrEsB5EHxrR4fhLS7Iuo7mJJ82OSfGp0NOAHTb+v59apyb8k0kPUAbU8U0HFOFNEiGlmkigLQrACaY9qcyw8jj6VIar8RxQQN4Ak84jrH58qayAjrH4vLeZ+sH6VQ4hQINwoVmZdIJ8Z0iD41gcd25xBuaOGAnZnuCY2kgDETO0xEkVRvu8e8u3WYd0m4V7xLQD7oRCqMAn0xmt46UvLM3NeDT7V7RRMojgYks+mQcDRJkydpxjFZt7iL9xYUQpHQMVBE914UjEfCSDIqonE/tEEAkE93c6i2kayeakK20mcmM0rcfca2LhPxLIE7tqXc8oLTAxgb1stOiLsjWybrMtxyyDSXZiRHI6gvxSsfETAG2xqn2eNF8k5RyyLGAO9OroII1R4bVd7Jg6neWV1JcfvXJk4zuwMnO3PeHjYVyDgElZ+UEi2SZHKBPTUPAC75aCvJS7R4QWmJUtouLgHYEAYJ58/ET0OfWfYlieEUnfU88zIMbjyrhOLT3wXh5VQF1EldRlpCqOYOnT56jXc+w1nRwoXVqIdwTncGOf5iKzU7q8mjjWMHSUUUVYhKxO2AdRhowP8AX+dbdYfarxcE7QPrmIH1rn+T2F6eSiytt1iT8oG/mZP5xTLtmSOeRiYwMgY8f4ClS9iW2/luPtHoackmcQYxPjE/cwT4c68/hnRygThxnJk85j+GaVLQBgb+Z6RmegNSSRvB6Y/PM0q2zMg+e3mc+dOl4RNsBYyDJncdNv61ILQ2/OfKpDQLYq9vpE7hAgFPRAB9o8BSlBTtNUo8ktgBS0RS1aQhIqp2rxBt2nfAAUyZIjlIgb5qy77Abn6D8wa5n22vXFtKFZc62I076EJAyx5xVwjckhSdI2O0OKCJrLcpidM5UKsiSCWdRvzrkfaDtoi1bVVCvcJyD3tAIkmVHdyADOY6ZqDji1y5IJ0BEkt3RAksfCYUyR+ACsTtFgWBIwFQADc6SuWLTqJL7kxEYFdWnoxu2YymyS1xrXGWTqDlSx/DgwSRGkyYGcAAQDANVuJ4i4wcie+EHeJJJMbTykQCfDap+DsaWQvAITuIM94o0d2JZpUZjH3qDtU7LBEaBHMkIGlmnmfw/wAq3VXwT4E4VjbOtCdUXCXOzAEiRkSJQ7czzqxedXwGnRqEjmoLlZjqE5dRyOK3DBCiqWhjb0ycBS7t45MHw36CouEtsdakfCDJG+BJGNkz4T1xBH7A2eGcKl3GTvMQQCWheQIgelPDhuIKkBkuIwedla4RcaPKNIPgDypvFMEtRI7yJy/FDNA6nO+2fHLeCVV4lyRKJpBM7bDVnbAJzvXPLDZpHKRdtItu4gUxCqf3pBuQCOWCT17wruvYi4W4Ylt/e3QfRyOQ8K84QBgLlzLs9vPMIxZYB6gaRA6+degfo8H/AGS8+/dP1ck53OeuamC5b8lywdXRRRWpIlYXax75A3IHoOZ863awu1XAuGZGBnlz58vWuf5PaXp5KDJnMaREecz/AC+n1cjE94DB67kco6Tv61Fcu2zu6+WoZBnFAv6jjVp/dBk9TMQBgRnn4159o6KZYRS2TE/6iftz+tTIG5kbE7VFw4IAB3k85jnE+EVMPz58vp/KriuCGSKnU1JppqmnBq0SSIY7T1pCKUmkqnSEOpDSTVPiuO0BiIPc1ZMdeUZ5Y8fWmucCwJx/FKjLLQQCxAI1FQCMA+LfUiuc9qLg92pMnVry3IDSIk5IktHgRTOM7WdhcAAOGVWG/LO3ebUAZwMRvg5ftE+tUndVuY5QCugjbkAfIj4a6dOFNWZykVe1Lut/i7p93pUSNRKoNcGDk51GBk+YgRCQHkBiF0mJMAJAQcog94AeEzVq7Z1XjAhSyLr1YABtgnbvneREbbxAiEBABJJRNRJkwAQNXQcgogCMzy6U+DMr2gFUiYMxqnvHS1wSPDvCcwY8TFTj7bBRrAB1Icfj7kDfyz0P3te9MssEsLzSeuSYJ/49JzB2oCAWdpcCQIwqqECjSfA7+dUsi8FaywFswJMIOYyBJx+Iz/PlWmnBhUcIwiLskbNpW2SkDciDy/pm3bf7SAB3xa2BLAqkRjaef9K2feaWYMvei9OOXuyQBPIFepPdAxiZm/RURvbbKF2P4Fkj92TEDPoN+Z51OGcEOD8TsqrPymWJPKFBXyJHpb7U0/E5P4AIzBW2pA8wFIjx2BMKWUWUGzlQvUKQilfM9wGI/EfCsbSiXX2HOhtox5KEPQgDUAPOdMnqx6V3/wCjo/8AZDwe4P8A1GuA7VDe7CAmdKk52GqTk84Ow8sxXffo4/8AsU/vOT6manT5TZcs0dZRRRWhIlZnHcI7NI2gc61KSonBSVMadGDc7PuRhefUZH/FNs8BejvKBnAkYHIHJnnXQUVj/NG7tl9RmGOAufL9xTxwT/L9xWzRT/niLezI/UrnT7ipRwjdPvWlS1XQiLczO/VW6fekPDP0+9aNFHQiG5mRxHC3DCqIBnU0iQPAHmfpXN8b2Jxd27JQBNBUjUpHxAnE5mFOcY2Nd3RVxgo4JfJ5/e9muJ0FUQSWmSwMZBnfJx/pmq/H+ynEuFATA1yNagn4dMmc/CP5CvSaStE6J2o8+4r2d4tristtRpyIYQsEwBP4oA7xGJwDmqfafsdxUKLSqw0qCNQXI1YyciefiN9x6dSUJ0G1Hma+yPFKCqW1E3FbVqUQsCTEzPxYEeZmoOM9j+MPwW97bK0ukklkIHQCEjFeqUU9zDajy3hPY/ilA1WxIZWw6jKhgBucHH5AqbivZPimDaUAaZ1agC0iCqie7zyeo3gV6ZSVL5djo8y4v2V4soiraU6WBjWsEAAAtqmTIBPmafa9keJGnugkMDOsfvbZ2g+eTXpVFS4pqikzzi/7K8SyFTbU91PxLkqMgZwDJE+fr0/sV2bc4fhRauqFcM5gNqwTjI8K6CiiMVFUgbsWiiiqEf/Z",
+                          "synopsis": "Una narrativa sobre la relación entre un hijo y su padre, que enfrenta la alienación y el juicio social.",
+                          "year": 1913,
+                          "link": "https://cdn.pruebat.org/recursos/recursos/La-condena.pdf",
+                          "ISBN": "978-9870412350",
+                          "author": {
+                            "name": "Franz Kafka",
+                            "otherBooks": [
+                              "La Metamorfosis",
+                              "El Proceso"]}}},
+                      {"book": {
+                          "title": "Cartas de un Padre",
+                          "pages": 96,
+                          "genere": "Filosofia",
+                          "cover": "https://www.revistakopek.com/wp-content/uploads/2019/06/carta-al-padre.jpg",
+                          "synopsis": "Una colección de cartas escritas por un padre a su hijo, explorando temas de la vida, la familia y la sociedad.",
+                          "year": 1919,
+                          "link": "https://web.seducoahuila.gob.mx/biblioweb/upload/Carta%20al%20padre,%20de%20Franz%20Kafka.pdf",
+                          "ISBN": "978-9870412347",
+                          "author": {
+                            "name": "Franz Kafka",
+                            "otherBooks": [
+                              "La Metamorfosis",
+                              "El Proceso"]}}},
+                   {"book": {
+                     "title": "El Señor de los Anillos",
+                     "pages": 1200,
+                     "genere": "Fantasia",
+                     "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1566425108i/33.jpg",
+                     "synopsis": "Una aventura épica en un mundo de fantasía llamado la Tierra Media.",
+                     "year": 1954,
+                     "link": "https://web.seducoahuila.gob.mx/biblioweb/upload/J.R.R.%20Tolkien%20La%20Comunidad%20del%20anillo%20I.pdf",
+                     "ISBN": "978-0618640157",
+                     "author": {
+                         "name": "J.R.R. Tolkien",
+                         "otherBooks": [
+                             "El Hobbit",
+                             "El Silmarillion"]}}},
+                   {"book": {
                          "title": "Juego de Tronos",
                          "pages": 694,
                          "genere": "Fantasia",
                          "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1273763400i/8189620.jpg",
                          "synopsis": "En un reino donde las estaciones duran años, una batalla épica por el trono se desarrolla.",
                          "year": 1996,
+                         "link": "https://dariososafoula.files.wordpress.com/2017/01/cancion-de-hielo-y-fuego-1-juego-de-tronos.pdf",
                          "ISBN": "978-0553103540",
                          "author": {
                              "name": "George R. R. Martin",
                              "otherBooks": [
                                  "Choque de Reyes",
                                  "Tormenta de Espadas",
-                                 "Festín de Cuervos"
-                             ]
-                         }
-                     }
-                 },
-                 {
-                   "book": {
+                                 "Festín de Cuervos"]}}},
+                   {"book": {
+                        "title": "Harry Potter y la Cámara Secreta",
+                        "pages": 256,
+                        "genere": "Fantasía",
+                        "cover": "https://images-na.ssl-images-amazon.com/images/I/81YOuOGFCJL.jpg",
+                        "synopsis": "La segunda entrega de la serie, donde Harry regresa a Hogwarts y enfrenta un misterioso enemigo que ataca a los estudiantes.",
+                        "year": 1998,
+                        "link": "http://www.cpte.gob.mx/desarrollo_educativo/pdf/pedagogia/libros_digitales/HARRY%20POTTER%20Y%20LA%20CAMARA%20SECRETA.pdf",
+                        "ISBN": "978-8478884957",
+                        "author": {
+                          "name": "J.K. Rowling",
+                          "otherBooks": [
+                            "La Piedra Filosofal",
+                            "El Prisionero de Azkaban"]}}},
+                 {"book": {
                        "title": "Harry Potter y la piedra filosofal",
                        "pages": 223,
                        "genere": "Fantasia",
                        "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1550337333i/15868.jpg",
                        "synopsis": "Un niño descubre que es un mago y comienza una aventura en una escuela de magia.",
                        "year": 1997,
+                       "link": "https://fecolsa.com.co/upload/Actividades%20Equilibrio%20Total/Rowling%2C%20J.%20K.%20-%20%20Harry%20Potter%20y%20la%20piedra%20filosofal.pdf",
                        "ISBN": "978-0747532699",
                        "author": {
                            "name": "J.K. Rowling",
                            "otherBooks": [
                                "Harry Potter y la cámara secreta",
                                "Harry Potter y el prisionero de Azkaban",
-                               "Harry Potter y el cáliz de fuego"
-                           ]
-                       }
-                   }
-               },
-               {
-                 "book": {
+                               "Harry Potter y el cáliz de fuego"]}}},
+                {"book": {
+                   "title": "Harry Potter y el Prisionero de Azkaban",
+                   "pages": 384,
+                   "genere": "Fantasia",
+                   "cover": "data:image/jpeg;base64,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",
+                   "synopsis": "En el tercer libro, Harry descubre la verdad sobre el fugitivo Sirius Black y su conexión con el pasado de los Potter.",
+                   "year": 1999,
+                   "link":"https://tavapy.gov.py/biblioteca/wp-content/uploads/2022/03/RowlingJ-Harry-Potter-y-el-prisionero-de-Azkaban-III.pdf",
+                   "ISBN": "978-8478884995",
+                   "author": {
+                     "name": "J.K. Rowling",
+                     "otherBooks": [
+                       "La Piedra Filosofal",
+                       "La Cámara Secreta"]}}},
+
+                       {
+                        "book": {
+                          "title": "Harry Potter y el Cáliz de Fuego",
+                          "pages": 640,
+                          "genere": "Fantasia",
+                          "cover": "data:image/jpeg;base64,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",
+                          "synopsis": "En este libro, Harry es seleccionado como competidor en el peligroso Torneo de los Tres Magos, enfrentando desafíos mortales.",
+                          "year": 2000,
+                          "link":"http://www.cpte.gob.mx/desarrollo_educativo/pdf/pedagogia/libros_digitales/HARRY%20POTTER%20Y%20EL%20CALIZ%20DE%20FUEGO.pdf",
+                          "ISBN": "978-8478885084",
+                          "author": {
+                            "name": "J.K. Rowling",
+                            "otherBooks": [
+                              "La Piedra Filosofal",
+                              "La Cámara Secreta"
+                            ]
+                          }
+                        }
+                      },
+
+                      {
+                        "book": {
+                          "title": "Harry Potter y la Orden del Fénix",
+                          "pages": 896,
+                          "genere": "Fantasia",
+                          "cover": "data:image/jpeg;base64,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",
+                          "synopsis": "En el quinto libro, Harry enfrenta la creciente amenaza de Lord Voldemort y se une a la misteriosa Orden del Fénix.",
+                          "year": 2003,
+                          "link":"http://www.cpte.gob.mx/desarrollo_educativo/pdf/pedagogia/libros_digitales/Rowling,%20Joanne%20K.-%205.%20Harry%20Potter%20y%20la%20Orden%20del%20Fenix.doc.pdf",
+                          "ISBN": "978-8478885107",
+                          "author": {
+                            "name": "J.K. Rowling",
+                            "otherBooks": [
+                              "La Piedra Filosofal",
+                              "La Cámara Secreta"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "book": {
+                          "title": "Harry Potter y el Misterio del Príncipe",
+                          "pages": 608,
+                          "genere": "Fantasia",
+                          "cover": "data:image/jpeg;base64,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",
+                          "synopsis": "En este libro, Harry investiga el pasado de Voldemort y descubre secretos oscuros mientras se prepara para la batalla final.",
+                          "year": 2005,
+                          "link":"https://escuela73abasto.files.wordpress.com/2020/11/harry-potter-y-el-misterio-del-principe-j.-k.-rowling.pdf",
+                          "ISBN": "978-8478885114",
+                          "author": {
+                            "name": "J.K. Rowling",
+                            "otherBooks": [
+                              "La Piedra Filosofal",
+                              "La Cámara Secreta"
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "book": {
+                          "title": "Harry Potter y las Reliquias de la Muerte",
+                          "pages": 640,
+                          "genere": "Fantasía",
+                          "cover": "data:image/jpeg;base64,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",
+                          "synopsis": "El último libro de la serie, donde Harry se embarca en una misión para destruir las Horrocruxes de Voldemort y enfrentar la batalla final.",
+                          "year": 2007,
+                          "link":"https://xfrank.files.wordpress.com/2011/11/harry-potter-71.pdf",
+                          "ISBN": "978-8478885343",
+                          "author": {
+                            "name": "J.K. Rowling",
+                            "otherBooks": [
+                              "La Piedra Filosofal",
+                              "La Cámara Secreta"
+                            ]
+                          }
+                        }
+                      },
+                      
+                                           
+               {"book": {
                      "title": "1984",
                      "pages": 328,
                      "genere": "Ciencia ficción",
                      "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1657781256i/61439040.jpg",
                      "synopsis": "Una inquietante visión de un futuro distópico y totalitario.",
                      "year": 1949,
+                     "link": "https://www.philosophia.cl/biblioteca/orwell/1984.pdf",
                      "ISBN": "978-0451524935",
                      "author": {
                          "name": "George Orwell",
                          "otherBooks": [
-                             "Rebelión en la granja"
-                         ]
-                     }
-                 }
-             },
-               {
-                 "book": {
-                     "title": "Apocalipsis Zombie",
-                     "pages": 444,
-                     "genere": "Zombies",
-                     "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1422626176i/24762432.jpg",
-                     "synopsis": "Un gallego se queda en casa en pleno apocalipsis zombie y acaba casi salvando el mundo",
-                     "year": 2001,
-                     "ISBN": "978-4444532611",
+                             "Rebelión en la granja"]}}},
+                {"book": {
+                     "title": "Rebelión en la Granja",
+                     "pages": 112,
+                     "genere": "Ciencia ficción",
+                     "cover": "https://global-uploads.webflow.com/6034d7d1f3e0f52c50b2adee/62b09b33ea242631be24d3d8_9788418933394.jpeg",
+                     "synopsis": "Una novela alegórica que narra la historia de una granja en la que los animales se rebelan contra la opresión humana y establecen su propio gobierno, solo para enfrentar nuevas formas de tiranía.",
+                     "year": 1945,
+                     "link": "https://www.suneo.mx/literatura/subidas/George%20Orwell%20Rebeli%C3%B3n%20en%20la%20Granja.pdf",
+                     "ISBN": "978-9870426129",
                      "author": {
-                         "name": "Manel Loreiro",
-                         "otherBooks": []
-                     }
-                 }
-             },
-             {
-               "book": {
+                       "name": "George Orwell",
+                       "otherBooks": [
+                         "1984",
+                         "La Hija del Clerigo"]}}},
+             {"book": {
                    "title": "Dune",
                    "pages": 412,
                    "genere": "Ciencia ficción",
                    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1555447414i/44767458.jpg",
                    "synopsis": "En el inhóspito planeta desértico de Arrakis, una gran intriga política y familiar se desarrolla.",
                    "year": 1965,
+                   "link": "https://www.youtube.com/watch?v=BtLSaxRnIhc",
                    "ISBN": "978-0441172719",
                    "author": {
                        "name": "Frank Herbert",
                        "otherBooks": [
                            "El mesías de Dune",
-                           "Hijos de Dune"
-                       ]
-                   }
-               }
-             },
-             {
-               "book": {
+                           "Hijos de Dune"]}}},
+             {"book": {
                    "title": "La Guía del Autoestopista Galáctico",
                    "pages": 216,
                    "genere": "Ciencia ficción",
                    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1653311117i/6691227.jpg",
                    "synopsis": "Un viaje absurdo y cómico por el espacio, con toallas.",
                    "year": 1979,
+                   "link": "https://www.youtube.com/watch?v=BtLSaxRnIhc",
                    "ISBN": "978-0345391803",
                    "author": {
                        "name": "Douglas Adams",
                        "otherBooks": [
                            "El restaurante del fin del mundo",
-                           "La vida, el universo y todo lo demás"
-                       ]
-                   }
-               }
-             },
-             {
-               "book": {
+                           "La vida, el universo y todo lo demás"]}}},
+             {"book": {
                    "title": "Neuromante",
                    "pages": 271,
                    "genere": "Ciencia ficción",
                    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554437249i/6088007.jpg",
                    "synopsis": "Una visión profética de la ciber-realidad y la inteligencia artificial.",
                    "year": 1984,
+                   "link": "https://www.youtube.com/watch?v=BtLSaxRnIhc",
                    "ISBN": "978-0441569595",
                    "author": {
                        "name": "William Gibson",
                        "otherBooks": [
                            "Conde Cero",
-                           "Mona Lisa Acelerada"
-                       ]
-                   }
-               }
-             },
-             {
-               "book": {
+                           "Mona Lisa Acelerada"]}}},
+             {"book": {
                    "title": "Fahrenheit 451",
                    "pages": 249,
                    "genere": "Ciencia ficción",
                    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1383718290i/13079982.jpg",
                    "synopsis": "Una sociedad futura donde los libros están prohibidos y 'bomberos' queman cualquier libro que encuentren.",
                    "year": 1953,
+                   "link": "https://www.youtube.com/watch?v=BtLSaxRnIhc",
                    "ISBN": "978-1451673319",
                    "author": {
                        "name": "Ray Bradbury",
                        "otherBooks": [
                            "Crónicas marcianas",
-                           "El hombre ilustrado"
-                       ]
-                   }
-               }
-             },
-               {
-                 "book": {
+                           "El hombre ilustrado"]}}},
+            {"book": {
                      "title": "El resplandor",
                      "pages": 688,
                      "genere": "Terror",
                      "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1641398308i/60038757.jpg",
                      "synopsis": "Una familia se muda a un hotel aislado para el invierno donde una presencia siniestra influye en el padre hacia la violencia.",
                      "year": 1977,
+                     "link": "https://www.youtube.com/watch?v=BtLSaxRnIhc",
                      "ISBN": "978-0307743657",
                      "author": {
                          "name": "Stephen King",
                          "otherBooks": [
                              "Carrie",
-                             "It"
-                         ]
-                     }
-                 }
-             },
-             {
-                 "book": {
+                             "It"]}}},
+             {"book": {
+                      "title": "It",
+                      "pages": 1138,
+                      "genere": "Terror",
+                      "cover": "https://diak46rl5chc7.cloudfront.net/orgs/108640/contents/j5g0z1534rp4qhmo/j5g0z1534rp4qhmo.png",
+                      "synopsis": "Una novela de terror que sigue las vidas de un grupo de amigos que se enfrentan a una entidad malévola que toma la forma de un payaso y aterroriza su ciudad natal de Derry, Maine.",
+                      "year": 1986,
+                      "link":"https://www.colonialtours.com/ebook/ebooks/It%20-%20Stephen%20King.pdf",
+                      "ISBN": "978-0451169518",
+                      "author": {
+                        "name": "Stephen King",
+                        "otherBooks": [
+                          "El Resplandor",
+                          "Cementerio de Animales"]}}},
+             {"book": {
                      "title": "Drácula",
                      "pages": 418,
                      "genere": "Terror",
                      "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1387151694i/17245.jpg",
                      "synopsis": "La historia del infame conde Drácula y su intento de mudarse de Transilvania a Inglaterra.",
                      "year": 1897,
+                     "link": "https://www.youtube.com/watch?v=BtLSaxRnIhc",
                      "ISBN": "978-0486411095",
                      "author": {
                          "name": "Bram Stoker",
                          "otherBooks": [
                              "La joya de las siete estrellas",
-                             "La madriguera del gusano blanco"
-                         ]
-                     }
-                 }
-             },
-             {
-                 "book": {
+                             "La madriguera del gusano blanco"]}}},
+             {"book": {
                      "title": "Frankenstein",
                      "pages": 280,
                      "genere": "Terror",
                      "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1669159060i/63631742.jpg",
                      "synopsis": "Un científico obsesionado crea una criatura viva a partir de partes de cuerpos robadas, con consecuencias desastrosas.",
                      "year": 1818,
+                     "link": "https://www.youtube.com/watch?v=BtLSaxRnIhc",
                      "ISBN": "978-0486282114",
                      "author": {
                          "name": "Mary Shelley",
                          "otherBooks": [
                              "El último hombre",
-                             "Valperga"
-                         ]
-                     }
-                 }
-             },
-             {
-               "book": {
+                             "Valperga"]}}},
+             {"book": {
                    "title": "La llamada de Cthulhu",
                    "pages": 43,
                    "genere": "Terror",
                    "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1485924654i/34094154.jpg",
                    "synopsis": "La historia de un monstruo ancestral que amenaza con revivir y dominar el mundo.",
                    "year": 1928,
+                   "link": "https://www.youtube.com/watch?v=BtLSaxRnIhc",
                    "ISBN": "978-1542461690",
                    "author": {
                        "name": "H.P. Lovecraft",
                        "otherBooks": [
                            "El horror de Dunwich",
-                           "En las montañas de la locura"
-                       ]
-                   }
-                 }
-               }
-             ]}
+                           "En las montañas de la locura"]}}}]}
