@@ -6,19 +6,48 @@ import { GrFormView } from 'react-icons/gr';
 import { useState } from 'react';
 import { BiSolidAddToQueue } from 'react-icons/bi';
 
+interface filters {
+    genero: string,
+    pages: number}
 
-const useBooks = (genero, pages) => {
-    const books = useSelector(state => state.books.library);
+// ----------- Books;
+interface Author {
+  name: string,
+  otherBooks: []}
+
+interface Book {
+  title: string,
+  pages: number,
+  genere: string,
+  cover: string,
+  synopsis: string,
+  year: number,
+  link: string,
+  ISBN: string,
+  author: Author}
+
+interface Books {
+  book: Book;
+}
+
+interface RootBooks {
+  library: Books[]}
+
+
+const useBooks = ( Filter: filters) => {
+
+    const books = useSelector((state: RootBooks) => state.library);
     const dispatch = useDispatch();
-    let [bookData, setBookData] = useState([""]);
-    const [renWin, setRenWin] = useState(false);
-    const [obj, setObj] = useState([""]);
 
-    const filteredBooks = books.filter(state => (
-         (genero === "Todos" || state.book.genere === genero) &&
-          state.book.pages <= pages));
+    let [bookData, setBookData] = useState<string[]>([""]);
+    const [renWin, setRenWin] = useState<boolean>(false);
+    const [obj, setObj] = useState<Books | null>();
+
+    const filteredBooks = books.filter(({ book }) => (
+         (Filter.genero === "Todos" || book.genere === Filter.genero) &&
+          book.pages <= Filter.pages));
     
-    const handleImageClick = (id, obj) => () => {
+    const handleImageClick = (obj: Books ) => () => {
         dispatch(addList(obj))}; 
 
     const handleIconClick = (arrayBooks,obj) => () =>{
@@ -33,7 +62,7 @@ const useBooks = (genero, pages) => {
     const elements = (
       <div className="container-elements">
         {renWin ? <Window 
-                    addList={handleImageClick(obj.book.ISBN, obj)}
+                    addList={handleImageClick(obj)}
                     fut={handleIconClose()}
                     title={bookData[0]} 
                     url={bookData[1]} 
@@ -58,7 +87,7 @@ const useBooks = (genero, pages) => {
                    className='button-two'> <GrFormView  className='icon' size='30' /></div>
                    
                     <div 
-                    onClick={handleImageClick(state.book.ISBN, state)}
+                    onClick={handleImageClick(state)}
                     className='button-four'> <BiSolidAddToQueue className='icon-two' size='20' /></div>
                   
                    <a href={state.book.link} > <img  
