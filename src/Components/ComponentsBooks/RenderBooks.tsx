@@ -39,18 +39,18 @@ const useBooks = ( Filter: filters) => {
     const books = useSelector((state: RootBooks) => state.library);
     const dispatch = useDispatch();
 
-    let [bookData, setBookData] = useState<string[]>([""]);
+    let [bookData, setBookData] = useState<(String | number)[]>([""]);
     const [renWin, setRenWin] = useState<boolean>(false);
-    const [obj, setObj] = useState<Books | null>();
+    const [obj, setObj] = useState<Books | undefined>();
 
     const filteredBooks = books.filter(({ book }) => (
          (Filter.genero === "Todos" || book.genere === Filter.genero) &&
           book.pages <= Filter.pages));
     
-    const handleImageClick = (obj: Books ) => () => {
+    const handleImageClick = (obj: Books | undefined ) => () => {
         dispatch(addList(obj))}; 
 
-    const handleIconClick = (arrayBooks,obj) => () =>{
+    const handleIconClick = (arrayBooks: (String | number)[], obj: Books | undefined) => () =>{
         setObj(obj);
         setBookData(arrayBooks);
         setRenWin(true)}
@@ -63,14 +63,16 @@ const useBooks = ( Filter: filters) => {
       <div className="container-elements">
         {renWin ? <Window 
                     addList={handleImageClick(obj)}
-                    fut={handleIconClose()}
-                    title={bookData[0]} 
-                    url={bookData[1]} 
-                    descripcion = {bookData[2]}
-                    autor ={bookData[3]}
-                    annio = {bookData[4]}
-                    pages = {bookData[5]}
-                    genero = {bookData[6]}/>: null}
+                    close={handleIconClose()}
+                    title={bookData[0].toString()} 
+                    cover={bookData[1].toString()} 
+                    synopsis = {bookData[2].toString()}
+                    author={{name: bookData[3].toString(), otherBooks: []}}
+                    year = {+bookData[4]}
+                    pages = {+bookData[5]}
+		    ISBN = "0"
+		    link = "..."
+                    genere = {bookData[6].toString()}/>: null}
             {filteredBooks.length > 0 ? (
                   <div className='container-book'>
                 {filteredBooks.map(state => (
@@ -78,7 +80,7 @@ const useBooks = ( Filter: filters) => {
                    <div 
                   onClick={handleIconClick( 
                            [state.book.title, 
-                            state.book.cover, 
+                          state.book.cover, 
                             state.book.synopsis,
                             state.book.author.name,
                             state.book.year,

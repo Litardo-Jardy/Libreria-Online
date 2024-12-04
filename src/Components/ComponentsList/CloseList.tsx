@@ -1,6 +1,9 @@
 import '../../Styles/List.css';
 
-const Close = (props) =>{
+interface PropsClose{
+   close: () => void}
+
+const Close = (props: PropsClose) =>{
     return(
      <div onClick={props.close} className="button-close-list"><b>x</b></div>
 )}

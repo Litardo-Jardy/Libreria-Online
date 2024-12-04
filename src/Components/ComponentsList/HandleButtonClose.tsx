@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 
 const useClose = () =>{
-    const [isVisible, setIsVisible] = useState(true)
+    const [isVisible, setIsVisible] = useState<boolean>(true)
     const handleResize = () => {
       if (window.innerWidth <= 1005) {
         setIsVisible(false);
