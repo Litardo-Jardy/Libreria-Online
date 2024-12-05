@@ -1,6 +1,5 @@
 import '../Styles/List.css'
 import { useDispatch, useSelector} from "react-redux";
-import { addBook } from '../Features/Books/bookSlice';
 import { deleteList } from '../Features/Books/listSlice';
 import Close from './ComponentsList/CloseList';
 import useClose from './ComponentsList/HandleButtonClose';
@@ -8,10 +7,6 @@ import useStorage from '../Features/Books/LocalStorage';
 
 interface ListProps{
    lclose: () => void}
-
-interface Author {
-  name: string,
-  otherBooks: []}
 
 interface Book {
   title: string,
@@ -22,19 +17,21 @@ interface Book {
   year: number,
   link: string,
   ISBN: string,
-  author: Author}
+  author: {
+    name: string,
+    otherBooks: []}}
 
-interface List {
-  book: Book;
-}
+interface Books {
+  book: Book}
 
 interface RootList {
-  library: List[]}
+  list:{ library: Books[]}}
 
 const List = (props: ListProps) =>{
 
    const {isVisible } = useClose();
-   const list = useSelector((state: RootList) => state.library);
+   const list = useSelector((state: RootList) => state.list.library);
+   console.log(list)
 
    const dispatch = useDispatch();
    const { updateStorage } = useStorage();

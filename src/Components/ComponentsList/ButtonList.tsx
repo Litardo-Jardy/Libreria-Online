@@ -6,10 +6,6 @@ interface ButtonProps {
    show: () => void}
 
 
-interface Author {
-  name: string,
-  otherBooks: []}
-
 interface Book {
   title: string,
   pages: number,
@@ -19,18 +15,19 @@ interface Book {
   year: number,
   link: string,
   ISBN: string,
-  author: Author}
+  author: {
+    name: string,
+    otherBooks: []}}
 
-interface List {
-  book: Book;
-}
+interface Books {
+  book: Book}
 
 interface RootList {
-  library: List[]}
+  list:{ library: Books[]}}
 
 const Button = (props: ButtonProps) =>{
 
-    const books = useSelector((state: RootList) => state.library);
+    const books = useSelector((state: RootList) => state.list.library);
     
     return(
        <div onClick={props.show} className='button-list'>

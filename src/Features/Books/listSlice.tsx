@@ -7,20 +7,41 @@ const getData = () =>{
       }else{
         return {"library": []}}}
 
+
+// ----------- Books;
+interface Author {
+  name: string,
+  otherBooks: []}
+
+interface Book {
+  title: string,
+  pages: number,
+  genere: string,
+  cover: string,
+  synopsis: string,
+  year: number,
+  link: string,
+  ISBN: string,
+  author: Author}
+
+interface Books {
+  book: Book;
+}
+
 export const listSlice = createSlice({   
        name: "list",
        initialState: getData,
        reducers: {
           deleteList: (state, action) =>{
                 const bookIndex = state.library.findIndex( 
-                      element => element.book.ISBN === action.payload);
+                      (element: Books ) => element.book.ISBN === action.payload);
                       if( bookIndex !== -1){
                         state.library.splice(bookIndex, 1)}
                 },
                   
           addList: (state, action) => {
                 const bookIndex = state.library.findIndex( 
-                      element => element.book.ISBN === action.payload.book.ISBN);
+                      (element: Books ) => element.book.ISBN === action.payload.book.ISBN);
                       if( bookIndex == -1){
                         state.library.push(action.payload);
                       }else{

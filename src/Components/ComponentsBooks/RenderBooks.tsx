@@ -11,9 +11,6 @@ interface filters {
     pages: number}
 
 // ----------- Books;
-interface Author {
-  name: string,
-  otherBooks: []}
 
 interface Book {
   title: string,
@@ -24,19 +21,20 @@ interface Book {
   year: number,
   link: string,
   ISBN: string,
-  author: Author}
+  author: {
+    name: string,
+    otherBooks: []}}
 
 interface Books {
-  book: Book;
-}
+  book: Book}
 
 interface RootBooks {
-  library: Books[]}
+  books:{ library: Books[]}}
 
 
 const useBooks = ( Filter: filters) => {
 
-    const books = useSelector((state: RootBooks) => state.library);
+    const books = useSelector((state: RootBooks) => state.books.library);
     const dispatch = useDispatch();
 
     let [bookData, setBookData] = useState<(String | number)[]>([""]);
