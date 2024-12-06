@@ -1,0 +1,28 @@
+.container-login{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center}
+
+.container-pass{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center}
+
+.title-login{
+   font-size: 20px;
+   text-align: center;
+   color: #fff;
+   margin: 260px;
+   width: 38%}
+
+.text-login{
+   font-size: 15px;
+   color: #6A7D3B;
+   text-align: center;
+   font-family: bold;
+   cursor: pointer; 
+   position: relative;
+   top: -10px}
+
