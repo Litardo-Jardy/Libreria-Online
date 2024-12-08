@@ -2,6 +2,7 @@ import '../Styles/Login.css';
 import { Flex, Input, Typography } from 'antd';
 import type { GetProps } from 'antd';
 import { Button } from 'antd';
+import { Link } from 'react-router-dom';
 
 type OTPProps = GetProps<typeof Input.OTP>;
 const { Title } = Typography;
@@ -27,9 +28,9 @@ const Login = () => {
 	  <br />
           <Flex gap="large" align="flex-center" vertical>
            <Input.OTP mask="✱" {...sharedProps} />
-           <Button type="primary">Sing in</Button>
-	   <p className='text-login'>Create a new code</p>
-           
+           <Button type="primary">Log In</Button>
+	   <Link to="/register"> <p className='text-login'> Create a new code</p></Link> 
+
           </Flex>
       </div>
    </div>
