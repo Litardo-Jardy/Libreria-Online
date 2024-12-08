@@ -1,19 +1,42 @@
 import '../Styles/List.css'
 import { useDispatch, useSelector} from "react-redux";
-import { addBook } from '../Features/Books/bookSlice';
 import { deleteList } from '../Features/Books/listSlice';
 import Close from './ComponentsList/CloseList';
 import useClose from './ComponentsList/HandleButtonClose';
 import useStorage from '../Features/Books/LocalStorage';
 
-const List = (props) =>{
+interface ListProps{
+   lclose: () => void}
+
+interface Book {
+  title: string,
+  pages: number,
+  genere: string,
+  cover: string,
+  synopsis: string,
+  year: number,
+  link: string,
+  ISBN: string,
+  author: {
+    name: string,
+    otherBooks: []}}
+
+interface Books {
+  book: Book}
+
+interface RootList {
+  list:{ library: Books[]}}
+
+const List = (props: ListProps) =>{
 
    const {isVisible } = useClose();
-   const list = useSelector(state => state.list.library);
+   const list = useSelector((state: RootList) => state.list.library);
+   console.log(list)
+
    const dispatch = useDispatch();
    const { updateStorage } = useStorage();
 
-   const handleImageClick = (id, obj) => () => {
+   const handleImageClick = (id: string) => () => {
       dispatch(deleteList(id))}
 
       updateStorage();
@@ -31,7 +54,7 @@ const List = (props) =>{
             <div className='image-book' key={state.book.ISBN}>
               <div 
               className='button'
-              onClick={handleImageClick(state.book.ISBN, {"book": {...state.book}})}>x</div>
+              onClick={handleImageClick(state.book.ISBN)}>x</div>
               <a href={state.book.link}><img 
                 width="150px" 
                 height="200px" 

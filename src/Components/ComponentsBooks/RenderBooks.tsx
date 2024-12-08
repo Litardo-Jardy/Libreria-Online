@@ -6,22 +6,49 @@ import { GrFormView } from 'react-icons/gr';
 import { useState } from 'react';
 import { BiSolidAddToQueue } from 'react-icons/bi';
 
+interface filters {
+    genero: string,
+    pages: number}
 
-const useBooks = (genero, pages) => {
-    const books = useSelector(state => state.books.library);
+// ----------- Books;
+
+interface Book {
+  title: string,
+  pages: number,
+  genere: string,
+  cover: string,
+  synopsis: string,
+  year: number,
+  link: string,
+  ISBN: string,
+  author: {
+    name: string,
+    otherBooks: []}}
+
+interface Books {
+  book: Book}
+
+interface RootBooks {
+  books:{ library: Books[]}}
+
+
+const useBooks = ( Filter: filters) => {
+
+    const books = useSelector((state: RootBooks) => state.books.library);
     const dispatch = useDispatch();
-    let [bookData, setBookData] = useState([""]);
-    const [renWin, setRenWin] = useState(false);
-    const [obj, setObj] = useState([""]);
 
-    const filteredBooks = books.filter(state => (
-         (genero === "Todos" || state.book.genere === genero) &&
-          state.book.pages <= pages));
+    let [bookData, setBookData] = useState<(String | number)[]>([""]);
+    const [renWin, setRenWin] = useState<boolean>(false);
+    const [obj, setObj] = useState<Books | undefined>();
+
+    const filteredBooks = books.filter(({ book }) => (
+         (Filter.genero === "Todos" || book.genere === Filter.genero) &&
+          book.pages <= Filter.pages));
     
-    const handleImageClick = (id, obj) => () => {
+    const handleImageClick = (obj: Books | undefined ) => () => {
         dispatch(addList(obj))}; 
 
-    const handleIconClick = (arrayBooks,obj) => () =>{
+    const handleIconClick = (arrayBooks: (String | number)[], obj: Books | undefined) => () =>{
         setObj(obj);
         setBookData(arrayBooks);
         setRenWin(true)}
@@ -33,15 +60,17 @@ const useBooks = (genero, pages) => {
     const elements = (
       <div className="container-elements">
         {renWin ? <Window 
-                    addList={handleImageClick(obj.book.ISBN, obj)}
-                    fut={handleIconClose()}
-                    title={bookData[0]} 
-                    url={bookData[1]} 
-                    descripcion = {bookData[2]}
-                    autor ={bookData[3]}
-                    annio = {bookData[4]}
-                    pages = {bookData[5]}
-                    genero = {bookData[6]}/>: null}
+                    addList={handleImageClick(obj)}
+                    close={handleIconClose()}
+                    title={bookData[0].toString()} 
+                    cover={bookData[1].toString()} 
+                    synopsis = {bookData[2].toString()}
+                    author={{name: bookData[3].toString(), otherBooks: []}}
+                    year = {+bookData[4]}
+                    pages = {+bookData[5]}
+		    ISBN = "0"
+		    link = "..."
+                    genere = {bookData[6].toString()}/>: null}
             {filteredBooks.length > 0 ? (
                   <div className='container-book'>
                 {filteredBooks.map(state => (
@@ -49,7 +78,7 @@ const useBooks = (genero, pages) => {
                    <div 
                   onClick={handleIconClick( 
                            [state.book.title, 
-                            state.book.cover, 
+                          state.book.cover, 
                             state.book.synopsis,
                             state.book.author.name,
                             state.book.year,
@@ -58,7 +87,7 @@ const useBooks = (genero, pages) => {
                    className='button-two'> <GrFormView  className='icon' size='30' /></div>
                    
                     <div 
-                    onClick={handleImageClick(state.book.ISBN, state)}
+                    onClick={handleImageClick(state)}
                     className='button-four'> <BiSolidAddToQueue className='icon-two' size='20' /></div>
                   
                    <a href={state.book.link} > <img  

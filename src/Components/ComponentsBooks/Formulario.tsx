@@ -2,15 +2,15 @@
 import React, { useState } from 'react';
 
 const useFormulario = () => {
-  const [genero, setGenero] = useState("Todos");
-  const [pages, setPages] = useState(1500);
+  const [genero, setGenero] = useState<string>("Todos");
+  const [pages, setPages] = useState<number>(1500);
 
-  const handleSelect = (event) => {
+  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const newValue = event.target.value;
     setGenero(newValue)};
 
-  const handleRange = (event) => {
-    const newValue = event.target.value;
+  const handleRange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = +event.target.value;
     setPages(newValue)};
 
   const formularioJSX = (

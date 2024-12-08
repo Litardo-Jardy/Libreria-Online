@@ -2,9 +2,32 @@ import '../../Styles/List.css';
 import { AiOutlineMenuUnfold } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
 
-const Button = (props) =>{
+interface ButtonProps {
+   show: () => void}
 
-    const books = useSelector(state => state.list.library);
+
+interface Book {
+  title: string,
+  pages: number,
+  genere: string,
+  cover: string,
+  synopsis: string,
+  year: number,
+  link: string,
+  ISBN: string,
+  author: {
+    name: string,
+    otherBooks: []}}
+
+interface Books {
+  book: Book}
+
+interface RootList {
+  list:{ library: Books[]}}
+
+const Button = (props: ButtonProps) =>{
+
+    const books = useSelector((state: RootList) => state.list.library);
     
     return(
        <div onClick={props.show} className='button-list'>
