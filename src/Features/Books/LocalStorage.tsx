@@ -6,6 +6,9 @@ const useStorage = () =>{
    const updateStorage = () =>{
          localStorage.setItem("Registros", JSON.stringify(list));}
 
-   return { updateStorage }}
+   const clearStorage = () => {
+     localStorage.removeItem("Registros")}
+
+   return { updateStorage, clearStorage }}
 
 export default useStorage;
