@@ -1,42 +1,47 @@
 
 import React, { useState } from 'react';
+import { IoRocket } from "react-icons/io5";
+import { FaSearch } from "react-icons/fa";
 
 const useFormulario = () => {
-  const [genero, setGenero] = useState<string>("Todos");
-  const [pages, setPages] = useState<number>(1500);
 
-  const handleSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const newValue = event.target.value;
-    setGenero(newValue)};
+  const generos = [
+    "Todos",
+    "Terror",
+    "Ciencia ficción",
+    "Filosofia",
+    "Fantasia"]
+
+  const [genero, setGenero] = useState<string>("Todos");
+  const [name, setName] = useState<string>("");
+
+  const handleSelect = (genero: string) => {
+    setGenero(genero)};
 
   const handleRange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newValue = +event.target.value;
-    setPages(newValue)};
+    const newValue = event.target.value;
+    setName(newValue)};
 
   const formularioJSX = (
     <div className='container-formulario'>
+      <div>
+        <h1 className='title-book'><IoRocket  /> AstroChat</h1>
+      </div>
       <div className='container-input'>
-      <label className='label-form'>Filtrar por paginas: </label>
             <input 
               className='input'
-              type="range" 
-              min="0" 
-              max="1500" 
-              value={pages}
-              onChange={handleRange}/>
+              type="text" 
+	      placeholder='Buscar por nombre...'
+              value={name}
+              onChange={handleRange}/><FaSearch style={{ "position": 'relative', "top": "20px", "left": "-20px"}} />
       </div>
       <div className='container-input-two'>
-      <label className='label-form'>Filtrar por genero: </label>
-            <select  value={genero} onChange={handleSelect}  >
-              <option value="Todos">Todos</option>
-              <option value="Terror">Terror</option>
-              <option value="Ciencia ficción">Ciencia ficción</option>
-              <option value="Filosofia">Filosofia</option>
-              <option value="Fantasia">Fantasia</option>
-            </select>
+          {generos.map((element) => (
+	     <p onClick={() => handleSelect(element)} className='container-generos'>{element}</p> 
+	  ))}
       </div>
     </div>);
 
-  return { genero, pages, formularioJSX }};
+  return { genero, name, formularioJSX }};
 
 export default useFormulario;

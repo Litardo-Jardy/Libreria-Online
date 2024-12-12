@@ -8,7 +8,7 @@ import { BiSolidAddToQueue } from 'react-icons/bi';
 
 interface filters {
     genero: string,
-    pages: number}
+    name: string}
 
 // ----------- Books;
 
@@ -43,7 +43,7 @@ const useBooks = ( Filter: filters) => {
 
     const filteredBooks = books.filter(({ book }) => (
          (Filter.genero === "Todos" || book.genere === Filter.genero) &&
-          book.pages <= Filter.pages));
+          book.title.toLowerCase().includes(Filter.name.toLowerCase())));
     
     const handleImageClick = (obj: Books | undefined ) => () => {
         dispatch(addList(obj))}; 
@@ -75,25 +75,34 @@ const useBooks = ( Filter: filters) => {
                   <div className='container-book'>
                 {filteredBooks.map(state => (
                   <div className='image-book' key={state.book.ISBN}>
-                   <div 
-                  onClick={handleIconClick( 
-                           [state.book.title, 
-                          state.book.cover, 
-                            state.book.synopsis,
-                            state.book.author.name,
-                            state.book.year,
-                            state.book.pages,
-                            state.book.genere], state)}
-                   className='button-two'> <GrFormView  className='icon' size='30' /></div>
-                   
                     <div 
+                  //onClick={handleIconClick( 
+                  //         [state.book.title, 
+                  //        state.book.cover, 
+                  //          state.book.synopsis,
+                  //          state.book.author.name,
+                  //          state.book.year,
+                  //          state.book.pages,
+                  //          state.book.genere], state)}
+                  // className='button-two'> <GrFormView  className='icon' size='30' /></div>
+                  //
+                  //  <div 
                     onClick={handleImageClick(state)}
                     className='button-four'> <BiSolidAddToQueue className='icon-two' size='20' /></div>
                   
-                   <a href={state.book.link} > <img  
-                       width="150px" 
-                       height="200px" 
-                       src={state.book.cover} /></a> 
+                   <a href={state.book.link} > 
+		      <img  
+                       width="135px" 
+                       height="185px" 
+		       alt='Libro'
+		       className='img-books'
+                       src={state.book.cover} />
+		   </a> 
+                   <div className='info-books'>
+		      <p className='text-info-books'>{state.book.author.name}</p> <p className='text-info-books' style={{ "color": "#1fb6f2"}}>{state.book.year}</p>
+		   </div>
+
+
                   </div>))}</div>):<div className='default-text'> <p>No se encontro ningun libro</p></div>}
                   </div>);
 
