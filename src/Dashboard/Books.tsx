@@ -1,9 +1,9 @@
 import '../Styles/Books.css';
-import useFormulario from './ComponentsBooks/Formulario';
-import useBooks from './ComponentsBooks/RenderBooks';
+import useFormulario from '../Components/ComponentsBooks/Formulario';
+import useBooks from '../Components/ComponentsBooks/RenderBooks';
 
 const Books = () =>{
-     const { genero, name, formularioJSX } = useFormulario();
+     const { genero, name, formularioJSX } = useFormulario(true);
      const { elements } = useBooks({ genero: genero, name: name});
 
     return(

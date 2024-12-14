@@ -5,6 +5,7 @@ import { addList } from '../../Features/Books/listSlice';
 import { GrFormView } from 'react-icons/gr';
 import { useState } from 'react';
 import { BiSolidAddToQueue } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 interface filters {
     genero: string,
@@ -54,8 +55,7 @@ const useBooks = ( Filter: filters) => {
         setRenWin(true)}
     
     const handleIconClose = () => () =>{
-        setRenWin(false)
-        console.log(renWin)}
+        setRenWin(false)}
 
     const elements = (
       <div className="container-elements">
@@ -90,14 +90,14 @@ const useBooks = ( Filter: filters) => {
                     onClick={handleImageClick(state)}
                     className='button-four'> <BiSolidAddToQueue className='icon-two' size='20' /></div>
                   
-                   <a href={state.book.link} > 
+                   <Link to={`/home/${state.book.ISBN}`} > 
 		      <img  
                        width="135px" 
                        height="185px" 
 		       alt='Libro'
 		       className='img-books'
                        src={state.book.cover} />
-		   </a> 
+		   </Link> 
                    <div className='info-books'>
 		      <p className='text-info-books'>{state.book.author.name}</p> <p className='text-info-books' style={{ "color": "#1fb6f2"}}>{state.book.year}</p>
 		   </div>

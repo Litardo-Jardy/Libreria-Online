@@ -60,13 +60,34 @@
    top: -18px}
 
  .text-info-books{
-   font-size: 14px;
- }
- 
+   font-size: 14px}
+
+/*------------------Book---------------------*/
+.container-show-book{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   width: 95%;
+   background-color: #132434}
+
+.info-show-book{
+   display: flex;
+   flex-direction: column;
+   width: 50%}
+
+.info-show-book-main{
+   display: flex;
+   flex-direction: row}
+
+.image-show-book{
+   width: 180;
+   height: 250px;
+   margin: 20px}
 
 /*----------------- Form --------------------*/
 .container-formulario{
    display: flex;
+   width: 100%;
    flex-wrap: wrap;
    justify-content: space-between;}
 

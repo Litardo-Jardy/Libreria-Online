@@ -1,6 +1,6 @@
 import "../Styles/App.css"
-import Books from "../Components/Books"
-import List from "../Components/List"
+import Books from "./Books"
+import List from "./List"
 import Button from "../Components/ComponentsList/ButtonList"
 import useClose from "../Components/ComponentsList/HandleButtonClose"
 //import { useNavigate, useParams } from "react-router-dom"

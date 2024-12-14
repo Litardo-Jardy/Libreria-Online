@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { IoRocket } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
 
-const useFormulario = () => {
+const useFormulario = ( showGenere: Boolean ) => {
 
   const generos = [
     "Todos",
@@ -35,11 +35,12 @@ const useFormulario = () => {
               value={name}
               onChange={handleRange}/><FaSearch style={{ "position": 'relative', "top": "20px", "left": "-20px"}} />
       </div>
+      { showGenere ?
       <div className='container-input-two'>
           {generos.map((element) => (
 	     <p onClick={() => handleSelect(element)} className='container-generos'>{element}</p> 
 	  ))}
-      </div>
+      </div>: null }
     </div>);
 
   return { genero, name, formularioJSX }};

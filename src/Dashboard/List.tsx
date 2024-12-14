@@ -1,8 +1,8 @@
 import '../Styles/List.css'
 import { useDispatch, useSelector} from "react-redux";
 import { deleteList } from '../Features/Books/listSlice';
-import Close from './ComponentsList/CloseList';
-import useClose from './ComponentsList/HandleButtonClose';
+import Close from '../Components/ComponentsList/CloseList';
+import useClose from '../Components/ComponentsList/HandleButtonClose';
 import useStorage from '../Features/Books/LocalStorage';
 
 interface ListProps{
