@@ -5,6 +5,7 @@ import { Button } from 'antd';
 import { LuBookOpen } from "react-icons/lu";
 import { FaRegStar } from "react-icons/fa";
 import { CiShare2 } from "react-icons/ci";
+import { FaAddressBook } from "react-icons/fa";
 
 const Book = () => {
 
@@ -34,7 +35,10 @@ const Book = () => {
          	       <h1>{element.book.title}</h1>
 		       <p>{element.book.year} - {element.book.pages} paginas</p>
 		       <p>{element.book.genere}</p>
-		       <Button type="primary"><LuBookOpen /> Leer</Button>
+		       <div>
+                          <Button type="primary"><LuBookOpen /> Leer</Button>
+		          <Button type="primary"><FaAddressBook /> Agregar a lista</Button>
+		       </div>
 		   </div>
 		</div>
 		<div className="info-show-book-second">
