@@ -4,7 +4,7 @@ import useBooks from '../Components/ComponentsBooks/RenderBooks';
 
 const Books = () =>{
      const { genero, name, formularioJSX } = useFormulario(true);
-     const { elements } = useBooks({ genero: genero, name: name});
+     const { elements } = useBooks({ genero: genero, name: name, author: "", isBook: false});
 
     return(
       <div className="container-books">
