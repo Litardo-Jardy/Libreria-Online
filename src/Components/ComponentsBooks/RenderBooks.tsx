@@ -25,7 +25,7 @@ interface Book {
   ISBN: string,
   author: {
     name: string,
-    otherBooks: []}}
+    otherBooks: string[]}}
 
 interface Books {
   book: Book}
@@ -39,9 +39,6 @@ const useBooks = ( Filter: filters) => {
     const books = useSelector((state: RootBooks) => state.books.library);
     const dispatch = useDispatch();
 
-    let [bookData, setBookData] = useState<(String | number)[]>([""]);
-    const [renWin, setRenWin] = useState<boolean>(false);
-    const [obj, setObj] = useState<Books | undefined>();
 
     let filteredBooks;
 
@@ -54,12 +51,9 @@ const useBooks = ( Filter: filters) => {
       filteredBooks = books.filter(({ book }) => (
          (Filter.genero === "Todos" || book.genere === Filter.genero) 
 	  && book.title.toLowerCase().includes(Filter.name.toLowerCase())))}
-    
+
     const handleImageClick = (obj: Books | undefined ) => () => {
         dispatch(addList(obj))}; 
-
-    const handleIconClose = () => () =>{
-        setRenWin(false)}
 
     const elements = (
       <div className="container-elements">
@@ -71,7 +65,6 @@ const useBooks = ( Filter: filters) => {
                     <div 
                     onClick={handleImageClick(state)}
                     className='button-four'> <BiSolidAddToQueue className='icon-two' size='20' /></div>
-                  
                    <Link to={`/home/${state.book.ISBN}`} > 
 		      <img  
                        width="135px" 
@@ -88,5 +81,5 @@ const useBooks = ( Filter: filters) => {
                   </div>))}</div>):<div className='default-text'> <p>No se encontro ningun libro</p></div>}
                   </div>);
 
-    return { elements, filteredBooks}}
+    return { elements, filteredBooks, handleImageClick}}
 export default useBooks;

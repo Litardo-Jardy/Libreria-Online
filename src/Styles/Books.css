@@ -121,6 +121,18 @@
    .info-show-book-main{
         flex-direction: column}}
 
+/*------------------Share--------------------*/
+.container-share-book{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 5px}
+
+.share-book-icon{
+  position: relative;
+  top: 3px;
+}
+
 /*----------------- Form --------------------*/
 .container-formulario{
    display: flex;

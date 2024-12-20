@@ -31,7 +31,6 @@ const List = (props: ListProps) =>{
 
    const {isVisible } = useClose();
    const list = useSelector((state: RootList) => state.list.library);
-   console.log(list)
 
    const dispatch = useDispatch();
    const { updateStorage } = useStorage();
@@ -39,7 +38,7 @@ const List = (props: ListProps) =>{
    const handleImageClick = (id: string) => () => {
       dispatch(deleteList(id))}
 
-      updateStorage();
+   updateStorage();
 
     return(
      <div className='container-list'>
