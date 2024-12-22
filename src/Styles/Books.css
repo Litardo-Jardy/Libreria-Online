@@ -70,8 +70,6 @@
    width: 85%;
    background-color: #132434}
 
-
-
 .info-show-book{
    display: flex;
    flex-direction: column;
@@ -111,6 +109,26 @@
    flex-direction: row;
    justify-content: space-between}
 
+
+
+@media screen and (max-width: 800px){
+   .info-show-book-button{
+       flex-direction: column}
+   
+    .button-show-card{
+      margin: 10px}
+
+    .info-show-book-main-data{
+      width: 100%}
+ 
+    .info-show-book{
+      width: 85%}
+
+    .container-image-show-book{
+      display: flex;
+      justify-content: center;
+      width: 100%}}
+
 @media screen and (max-width: 1260px){
    .info-show-book-button{
         top: 0}
@@ -139,15 +157,6 @@
    width: 100%;
    flex-wrap: wrap;
    justify-content: space-between;}
-
-.container-input{
-   font-display: flex;
-   flex-direction: column;
-   margin-left: 30px;}
-
-.input{
-   width: 100%;
-   margin-top: 15px;}
 
 .default-text{
   font-size: 45px;
@@ -193,7 +202,7 @@
 /* Formulario y titulo */
 @media screen and (max-width: 740px) {
    .title-book{
-     font-size: 23px;}
+     font-size: 22px;}
    
      .label-form{
       font-size: 17px;}
@@ -205,92 +214,8 @@
         top: 10px}
     
     .default-text{
-          font-size: 35px;}
+          font-size: 35px;}}
 
-    .container-input{
-        width: 50%;}
-        .input{
-          width: 40%;
-          margin-left: 0;}}
-
-
-/* ++++++++++++Venta Emergente++++++++++++      */
-
-.data-book{
-  width: 600px;
-  border: #fff solid 1px;
-  border-radius: 3%;
-  height: 400px;
-  position: fixed;
-  color: #000;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  top: 58%; 
-  left: 35%; 
-  transform: translate(-50%, -50%);}
-
-.image-book-two{
-  width: 40%;
-  justify-content: start;
-  margin-left: 20px;
-  height: 280px;
-  cursor: pointer}
-
-.button-tree{
-  color: red;
-  font-size: 23px;
-  position: relative;
-  width: 20px;
-  text-align: end;
-  margin-top: 2px;
-  left: -10px;
-  width: 100%;
-  cursor: pointer;}
-
-.title-window{
-  margin-top: -37px;
-  margin-left: 20px;
-  font-size: 30px;}
-
-.descripcion-book{
-  width: 50%;
-  margin-top: -40px;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: 15px;}
-
-.title-data{
-  color: red;
-  font-size: 20px;}
-
-.data-two{
-  width: 50%;
-  margin-top: -50px;}
-
-.data-tree{
-  width: 35%;
-  margin-left: 35px;
-  margin-top: -50px;}
-
-.parrafos{
-  position: relative;
-  font-size: 15px;
-  top: -15px;}
-
-.container-data{
-  display: flex;
-  flex-direction: row;}
-
-.button-add-list{
-  width: 80%;
-  color: #23a12b;
-  text-align: center;
-  position: relative;
-  font-size: 20px;
-  top: -50px;
-  cursor: pointer;}
 
 @media screen and (max-width: 900px) {
     .data-book{
@@ -329,11 +254,15 @@
    display: flex;
    flex-direction: row;
    width: 310px;
+   font-display: flex;
+   margin-left: 30px;
    margin-top: 25px}
 
 .input{
    background-color: transparent;
    width: 90%;
+   width: 100%;
+   margin-top: 15px;
    outline: none;
    color: #fff;
    height: 25px;
@@ -364,3 +293,18 @@
   -moz-box-shadow: -2px 5px 45px 2px rgba(31,182,242,1);
   box-shadow: -2px 5px 45px 2px rgba(31,182,242,1)}
 
+@media screen and (max-width: 550px){
+   .container-formulario{
+       flex-direction: row}
+
+    .container-input{
+       width: 45%}
+
+    .icon-input-show{
+	position: relative;
+       left: 20px;
+    }
+
+    .input{
+       font-size: 14px;
+       width: 90%}}

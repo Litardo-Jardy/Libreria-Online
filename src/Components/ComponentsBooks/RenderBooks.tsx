@@ -5,6 +5,7 @@ import { GrFormView } from 'react-icons/gr';
 import { useState } from 'react';
 import { BiSolidAddToQueue } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
+import useAlert from './Alert';
 
 interface filters {
     genero: string,
@@ -36,6 +37,7 @@ interface RootBooks {
 
 const useBooks = ( Filter: filters) => {
 
+    const { chooseAlert, ContainerToast } = useAlert();
     const books = useSelector((state: RootBooks) => state.books.library);
     const dispatch = useDispatch();
 
@@ -53,11 +55,13 @@ const useBooks = ( Filter: filters) => {
 	  && book.title.toLowerCase().includes(Filter.name.toLowerCase())))}
 
     const handleImageClick = (obj: Books | undefined ) => () => {
-        dispatch(addList(obj))}; 
+chooseAlert("¡Libro agregado con exito!", "success")
+        dispatch(addList(obj))
+        }; 
 
     const elements = (
       <div className="container-elements">
-      
+            { ContainerToast }
             {filteredBooks.length > 0 ? (
                   <div className='container-book'>
                 {filteredBooks.map(state => (

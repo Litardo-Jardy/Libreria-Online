@@ -11,6 +11,7 @@ import {
 } from "react-share";
 
 interface propsShare{
+  nameBook: string;
   isVisible: boolean}
 
 const Share = (props: propsShare) => {
@@ -18,7 +19,7 @@ const Share = (props: propsShare) => {
    const location = useLocation();
 
    const shareUrl = "http://localhost:3000" + location.pathname;
-   const title = "Te envito a leer este maravilloso libro conmigo <3!!"
+   const title = `Descubre los secretos detrás de ${props.nameBook}: una historia que cambiará tu perspectiva. 📚✨ ¡Haz clic aquí y sumérgete en esta fascinante lectura! 🔗\n\n`
 
    return (
      <div style={{"display": `${ props.isVisible ? "flex": "none"}`}} className="container-share-book">

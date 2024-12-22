@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFormulario from "../Components/ComponentsBooks/Formulario";
 import data from "../Features/Books/data.json";
 import { Button } from 'antd';
@@ -12,7 +12,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { MdDelete } from "react-icons/md";
 import { deleteList } from "../Features/Books/listSlice";
 import Share from "../Components/ComponentsBooks/ShareBooks";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useAlert from "../Components/ComponentsBooks/Alert";
+import { ToastContainer, toast } from "react-toastify";
 
 interface Book {
   title: string,
@@ -35,12 +37,29 @@ interface RootList {
 
 const Book = () => {
 
-   const { formularioJSX } = useFormulario(false);
+   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+   useEffect(() => {
+     const handleResize = () => {
+      setWindowWidth(window.innerWidth)};
+
+     window.addEventListener("resize", handleResize);
+
+     return () => {
+      window.removeEventListener("resize", handleResize)}
+   }, []);
+   
+   const { chooseAlert, ContainerToast } = useAlert();
+   const { name, formularioJSX } = useFormulario({showGenere: false, handleSubmit: searchBook});
    const list = useSelector((state: RootList) => state.list.library);
    const dispatch = useDispatch();
+   const navegite = useNavigate();
 
    const deleteImageClick = (id: string) => () => {
-      dispatch(deleteList(id))}
+      dispatch(deleteList(id))
+toast.dismiss();
+      chooseAlert("¡Libro eliminado con exito!", "info");
+   }
 
    const { book } = useParams();
    const books = data.library;
@@ -58,6 +77,14 @@ const Book = () => {
    const changeVisibleShare = () => {
       setVisible(!visible)}
 
+   function searchBook(event: React.FormEvent<HTMLInputElement> ) {
+      event.preventDefault();
+      const newBook = books.find((element) => element.book.title.toLowerCase().includes(name.toLowerCase()));
+      if(newBook && name.length >= 2){
+        navegite(`/home/${newBook.book.ISBN}`); 
+      }else{
+        chooseAlert(`El libro ${name} no existe`, "war") }}
+
    return(
       <div style={{ "width": "99%", 
 	            "display": "flex", 
@@ -65,6 +92,7 @@ const Book = () => {
 		    "justifyContent": "center"}} className="container-books">
         {formularioJSX}
 	<div className="container-show-book">
+	   { ContainerToast }
            {toShow.map((element) => (
 	     <div key={element.book.ISBN} className="info-show-book">
 	        <div className="info-show-book-main"> 
@@ -83,7 +111,7 @@ const Book = () => {
 			      <FaRegStar className="info-show-book-main-data-icon" />}
 			   <CiShare2 onClick={changeVisibleShare} className="info-show-book-main-data-icon" />
 		       </span>
-                       <Share isVisible={visible} />
+                       <Share nameBook={element.book.title} isVisible={visible} />
                        <h3 style={{"fontSize": "16px"}}>{element.book.author.name} </h3>
          	       <h1 style={{"fontSize":"28px", "marginTop": "-18px"}}>{element.book.title}</h1>
 		       <p style={{"fontSize": "13px", "marginTop": "-18px"}}>{element.book.year} - {element.book.pages} paginas</p>
@@ -92,11 +120,13 @@ const Book = () => {
                           <Button type="primary"><LuBookOpen /> Leer</Button>
 		          { isList ? 
 			  <Button 
+			    className="button-show-card"
 			    type="primary" 
                             onClick={deleteImageClick(toShow[0].book.ISBN)}
 			    style={{"backgroundColor": "#183C5C"}}> 
 			       <MdDelete size="18"/> Eliminar de lista de lectura</Button>: 
 			  <Button 
+			    className="button-show-card"
 			    type="primary" 
                             onClick={handleImageClick(toShow[0])}
 			    style={{"backgroundColor": "#183C5C"}}> 
@@ -111,9 +141,9 @@ const Book = () => {
 	     </div>
 	))} 
 	</div>
-	<div style={{"width": "85%"}} className="container-books">
+	<div style={{"width": "90%"}} className="container-books">
 	   <h3 style={{ "position": "relative", "top": "20px"}}>Libros relacionados </h3>
-          <span style={{  "position": "relative", "top": `${filteredBooks.length <= 7 ? "-100px" : "0"}`}}> { elements } </span>
+          <span style={{  "position": "relative", "top": `${filteredBooks.length <= 7 && windowWidth >= 990 ? "-100px" : "0"}`}}> { elements } </span>
 	</div>
       </div>
    )}

@@ -1,9 +1,13 @@
-
+import '../../Styles/Books.css';
 import React, { useState } from 'react';
 import { IoRocket } from "react-icons/io5";
 import { FaSearch } from "react-icons/fa";
 
-const useFormulario = ( showGenere: Boolean ) => {
+interface propsForm{
+  showGenere: Boolean,
+  handleSubmit?: (event: any) => void}
+
+const useFormulario = ( props: propsForm ) => {
 
   const generos = [
     "Todos",
@@ -27,15 +31,21 @@ const useFormulario = ( showGenere: Boolean ) => {
       <div>
         <h1 className='title-book'><IoRocket  /> AstroChat</h1>
       </div>
-      <div className='container-input'>
+      <div className="container-input">
+          <form style={{ "display": "Flex", "flexDirection": "row" }} 
+	  onSubmit={(event) => {
+          event.preventDefault();
+          if (props.handleSubmit) {
+            props.handleSubmit(event)}}}>
             <input 
-              className='input'
+              className="input"
               type="text" 
 	      placeholder='Buscar por nombre...'
               value={name}
-              onChange={handleRange}/><FaSearch style={{ "position": 'relative', "top": "20px", "left": "-20px"}} />
+              onChange={handleRange}/><FaSearch className="icon-input-show" style={{ "position": 'relative', "top": "16px", "left": "-20px"}} />
+	   </form>   
       </div>
-      { showGenere ?
+      { props.showGenere ?
       <div className='container-input-two'>
           {generos.map((element) => (
 	     <p onClick={() => handleSelect(element)} className='container-generos'>{element}</p> 
