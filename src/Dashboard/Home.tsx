@@ -3,30 +3,33 @@ import Books from "./Books"
 import List from "./List"
 import Button from "../Components/ComponentsList/ButtonList"
 import useClose from "../Components/ComponentsList/HandleButtonClose"
+import { useParams } from "react-router-dom"
+import useStorage from "../Features/Books/LocalStorage"
+import { MdElderlyWoman } from "react-icons/md"
 //import { useNavigate, useParams } from "react-router-dom"
 //import useStorage from "../Features/Books/LocalStorage"
 //import { useEffect, useState } from "react"
 
-const Home = () => {
-   //const { id } = useParams();
-   //const [reload, setReload] = useState(false);
-   const {isVisible, handleIconClick} = useClose();
-   //const { clearStorage } = useStorage();
-   //const navegate = useNavigate();
+interface propsUser {
+	user: boolean
+}
 
-   //useEffect(() => {
-   //  if(!reload && id == "nouveau"){
-   //    clearStorage();
-   //    setReload(true);   
-   //    navegate("/home/nouveau")
-   //    window.location.reload()}
-   //
-   //},[reload])
+const Home = (newUser: propsUser) => {
+	const { isVisible, handleIconClick } = useClose();
+	const { clearStorage } = useStorage();
 
-   return(
-    <div className="container-general">
-      <Books />
-      {isVisible ? <List lclose={handleIconClick()} />: <Button show={handleIconClick()} />}
-    </div>
-   )}
+	const storedName = localStorage.getItem("newUser");
+	console.log(storedName);
+	console.log(storedName === "true")
+	if (storedName === "true") {
+		localStorage.clear();
+	}
+
+	return (
+		<div className="container-general">
+			<Books />
+			{isVisible ? <List lclose={handleIconClick()} /> : <Button show={handleIconClick()} />}
+		</div>
+	)
+}
 export default Home;

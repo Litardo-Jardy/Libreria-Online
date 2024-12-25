@@ -1,10 +1,12 @@
 import '../../Styles/List.css';
 
-interface PropsClose{
-   close: () => void}
+interface PropsClose {
+	close: () => void
+}
 
-const Close = (props: PropsClose) =>{
-    return(
-     <div onClick={props.close} className="button-close-list"><b>x</b></div>
-)}
+const Close = (props: PropsClose) => {
+  return (
+    <div onClick={props.close} className="button-close-list"><b>x</b></div>
+  );
+};
 export default Close;
