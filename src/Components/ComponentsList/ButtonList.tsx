@@ -32,13 +32,13 @@ interface RootList {
 
 const Button = (props: ButtonProps) => {
 
-  const books = useSelector((state: RootList) => state.list.library);
+ const books = useSelector((state: RootList) => state.list.library);
 
-  return (
-    <div onClick={props.show} className='button-list'>
-      <AiOutlineMenuUnfold className='icon-list' size="35" color="white" />
-      <div className='container-number-list'><p className='number-list'><b>{books.length}</b></p></div>
-    </div>
-  );
+ return (
+  <div onClick={props.show} className='button-list'>
+   <AiOutlineMenuUnfold className='icon-list' size="35" color="white" />
+   <div className='container-number-list'><p className='number-list'><b>{books.length}</b></p></div>
+  </div>
+ );
 };
 export default Button;
