@@ -8,14 +8,14 @@ import Login from './Login/login';
 
 const App = () => {
 
-	return (
-		<Routes>
-			<Route path="/" element={<Navigate to="/home/login" />} />
-			<Route path="/home" element={<Home user={false} />} />
-			<Route path="/home/login" element={<Login />} />
-			<Route path="/home/register" element={<SignUp />} />
-			<Route path="/home/:book" element={<Book />} />
-		</Routes>
-	);
+   return (
+      <Routes>
+         <Route path="/" element={<Navigate to="/home/login" />} />
+         <Route path="/home" element={<Home />} />
+         <Route path="/home/login" element={<Login />} />
+         <Route path="/home/register" element={<SignUp />} />
+         <Route path="/home/:book" element={<Book />} />
+      </Routes>
+   );
 };
 export default App;

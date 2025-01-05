@@ -4,6 +4,8 @@ import type { GetProps } from 'antd';
 import { Button } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { clearList } from '../Features/Books/listSlice';
 import useStorage from '../Features/Books/LocalStorage';
 
 type OTPProps = GetProps<typeof Input.OTP>;
@@ -18,8 +20,9 @@ interface statusProps {
 const SignUp = () => {
 
    const navegation = useNavigate();
+   const dispatch = useDispatch();
 
-   const onChange: OTPProps['onChange'] = (text) => {
+   const onChange: OTPProps['onChange'] = text => {
       setVerify(text);
    };
 
@@ -37,9 +40,9 @@ const SignUp = () => {
          if (pass == verify) {
             setStatus({ name: '*Loading...', color: 'blue' });
             localStorage.setItem('codeUser', pass);
-            localStorage.setItem('newUser', 'true');
-            window.location.href = '/home';
-
+            clearStorage();
+            dispatch(clearList());
+            navegation('/home');
          } else {
             setStatus({ name: '*The codes don\'t match', color: '#B94A48' });
          }
@@ -54,6 +57,8 @@ const SignUp = () => {
       onChange,
       value: verify
    };
+
+   const { clearStorage } = useStorage();
 
    const changeUrl = () => {
       navegation('/home/login');
