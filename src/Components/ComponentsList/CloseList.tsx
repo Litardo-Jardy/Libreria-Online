@@ -5,8 +5,8 @@ interface PropsClose {
 }
 
 const Close = (props: PropsClose) => {
- return (
-  <div onClick={props.close} className="button-close-list"><b>x</b></div>
- );
+   return (
+      <div onClick={props.close} className="button-close-list"><b>x</b></div>
+   );
 };
 export default Close;
