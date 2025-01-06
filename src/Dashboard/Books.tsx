@@ -3,7 +3,7 @@ import useFormulario from '../Components/ComponentsBooks/Formulario';
 import useBooks from '../Components/ComponentsBooks/RenderBooks';
 
 const Books = () => {
-   const { genero, name, formularioJSX } = useFormulario({ showGenere: false });
+   const { genero, name, formularioJSX } = useFormulario({ showGenere: true });
    const { elements } = useBooks({ genero: genero, name: name, author: '', isBook: false });
 
    return (

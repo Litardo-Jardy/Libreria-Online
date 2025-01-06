@@ -84,8 +84,6 @@ const useBooks = (Filter: filters) => {
                      <div className='info-books'>
                         <p className='text-info-books'>{state.book.author.name}</p> <p className='text-info-books' style={{ 'color': '#1fb6f2' }}>{state.book.year}</p>
                      </div>
-
-
                   </div>))}</div>) : <div className='default-text'> <p>No se encontro ningun libro</p></div>}
       </div>);
 

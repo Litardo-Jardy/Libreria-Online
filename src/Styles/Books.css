@@ -2,7 +2,7 @@
 .container-books{
    opacity: .8;
    color: white;
-   width: 65%;
+   width: 85%;
    overflow: hidden;
    border-radius: 10px;
    margin: 5px;}
@@ -27,6 +27,7 @@
 
 .image-book{
    width: 140;
+   border-radius: 10px;
    height: 200px;
    margin: 20px}
 
@@ -34,7 +35,6 @@
    -webkit-box-shadow: -2px 5px 45px -1px rgba(31,182,242,1);
    -moz-box-shadow: -2px 5px 45px -1px rgba(31,182,242,1);
     box-shadow: -2px 5px 45px -1px rgba(31,182,242,1)}
-
 
 @media screen and (max-width: 470px) {
   .image-book{
@@ -108,8 +108,6 @@
    top: 20px;
    flex-direction: row;
    justify-content: space-between}
-
-
 
 @media screen and (max-width: 800px){
    .info-show-book-button{
@@ -269,7 +267,7 @@
    border: none}
 
 .input:focus{
-  boder: none;
+  border: none;
   border-bottom: 2px solid #1fb6f2}
 
 .container-input-two{

@@ -23,7 +23,10 @@ const Login = () => {
    };
 
    const [verify, setVerify] = useState<string>('');
-   const [status, setStatus] = useState<statusProps | null>();
+   const [status, setStatus] = useState<statusProps | null>({
+      name: '*Hello! Welcome.',
+      color: '#6A7D3B'
+   });
 
    const handleChange = () => {
       const pass = localStorage.getItem('codeUser');
@@ -42,16 +45,15 @@ const Login = () => {
 
    return (
       <div className="container-login">
-         <div className="container-pass">
+         <div className='container-pass'>
             <Title className='title-login' level={5}><span style={{ 'color': '#fff', 'fontSize': '22px' }}>
 					Please enter your login code to verify your access</span></Title>
             {status ? <p style={{ 'color': status.color }} className='text-verify'>{status.name}</p> : null}
             <br />
-            <Flex gap="large" align="flex-center" vertical>
+            <Flex gap="large" align="stretch" vertical>
                <Input.OTP mask="✱" {...sharedProps} />
                <Button onClick={handleChange} type="primary">Log In</Button>
                <Link to="/home/register"> <p className='text-login'>Create a new code</p></Link>
-
             </Flex>
          </div>
       </div>

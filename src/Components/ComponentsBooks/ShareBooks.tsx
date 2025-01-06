@@ -12,6 +12,8 @@ import {
 
 interface propsShare {
 	nameBook: string;
+	//author: string;
+	//COlocar el nombre del autor en el mensaje de whatsapp;
 	isVisible: boolean
 }
 
@@ -20,7 +22,7 @@ const Share = (props: propsShare) => {
    const location = useLocation();
 
    const shareUrl = 'http://localhost:3000' + location.pathname;
-   const title = `Descubre los secretos detrás de ${props.nameBook}: una historia que cambiará tu perspectiva. 📚✨ ¡Haz clic aquí y sumérgete en esta fascinante lectura! 🔗\n\n`;
+   const title = `Descubre los secretos detrás de ${props.nameBook} una historia que cambiará tu perspectiva. 📚✨ ¡Haz clic aquí y sumérgete en esta fascinante lectura! 🔗\n\n`;
 
    return (
       <div style={{ 'display': `${props.isVisible ? 'flex' : 'none'}` }} className="container-share-book">
