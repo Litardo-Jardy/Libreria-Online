@@ -8,10 +8,12 @@ body{
     justify-content: center;}
 
 ::-webkit-scrollbar {
+      height: 3px;
       width: 3px;}
 
 ::-webkit-scrollbar-thumb {
         background-color: #888; 
+	width: 3px;
         border-radius: 6px;}
 
 ::-webkit-scrollbar-thumb:hover {

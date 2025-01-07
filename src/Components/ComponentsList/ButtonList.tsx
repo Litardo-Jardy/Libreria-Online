@@ -1,4 +1,4 @@
-import '../../Styles/List.css';
+import '../../Styles/Navbar.css';
 import { AiOutlineMenuUnfold } from 'react-icons/ai';
 import { useSelector } from 'react-redux';
 

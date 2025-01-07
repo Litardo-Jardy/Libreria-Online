@@ -13,7 +13,7 @@ import {
 interface propsShare {
 	nameBook: string;
 	//author: string;
-	//COlocar el nombre del autor en el mensaje de whatsapp;
+	//TODO:Colocar el nombre del autor en el mensaje de whatsapp;
 	isVisible: boolean
 }
 

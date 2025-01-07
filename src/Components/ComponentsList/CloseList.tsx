@@ -1,4 +1,4 @@
-import '../../Styles/List.css';
+import '../../Styles/Navbar.css';
 
 interface PropsClose {
 	close: () => void

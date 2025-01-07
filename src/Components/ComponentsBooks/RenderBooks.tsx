@@ -58,6 +58,8 @@ const useBooks = (Filter: filters) => {
 			&& book.title.toLowerCase().includes(Filter.name.toLowerCase())));
    }
 
+   filteredBooks = filteredBooks.sort(() => Math.random() - 0.5);
+
    const handleImageClick = (obj: Books | undefined) => () => {
       chooseAlert('¡Libro agregado con exito!', 'success');
       dispatch(addList(obj));

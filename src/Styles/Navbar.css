@@ -1,10 +1,15 @@
-.container-list{
+.container-navbar{
     opacity: .8;
     color: white;
-    width: 30%;
+    width: 17%;
     z-index: 0;
     border-radius: 10px;
     margin: 5px;}
+
+.title-menu{
+    background-color: #0B2B3A;
+    border-radius: 10px;
+}
 
 @media screen and (max-width: 1006px) {
     .container-list{
@@ -15,11 +20,12 @@
     }
 
 .container-list-book{
-    display: flex;
-    flex-wrap: wrap;
+    display: flex; 
+    flex-direction: column;
     position: relative;
-    top: -20px;
-    height: 82vh;
+    height: 40vh;
+    background-color: #0B2B3A;
+    border-radius: 10px;
     overflow: auto;
     justify-content: space-around;}
 

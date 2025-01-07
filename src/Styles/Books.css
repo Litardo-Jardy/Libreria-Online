@@ -27,7 +27,6 @@
 
 .image-book{
    width: 140;
-   border-radius: 10px;
    height: 200px;
    margin: 20px}
 
@@ -274,12 +273,15 @@
    display: flex;
    flex-direction: row;
    width: 100%;
-   justify-content: space-around}
+   overflow-y: hidden;
+   justify-content: space-evenly}
+
 
 .container-generos{
   margin: 3px;
   font-size: 14px;
   border: 1px solid #fff;
+  background-color: #0B2B3A;
   border-radius: 18px;
   padding: 5px 10px }
 
@@ -290,6 +292,18 @@
   -webkit-box-shadow: -2px 5px 45px 2px rgba(31,182,242,1);
   -moz-box-shadow: -2px 5px 45px 2px rgba(31,182,242,1);
   box-shadow: -2px 5px 45px 2px rgba(31,182,242,1)}
+
+@media screen and (max-width: 870px){
+  .container-generos{
+    margin: 15px;
+  }
+
+  .container-input-two{
+   width: 95%;
+   position: relative;
+   left: 2px;
+  }
+}
 
 @media screen and (max-width: 550px){
    .container-formulario{

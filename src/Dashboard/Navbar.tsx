@@ -1,9 +1,11 @@
-import '../Styles/List.css';
+import '../Styles/Navbar.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteList } from '../Features/Books/listSlice';
 import Close from '../Components/ComponentsList/CloseList';
 import useClose from '../Components/ComponentsList/HandleButtonClose';
 import useStorage from '../Features/Books/LocalStorage';
+import { IoMenu } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 interface ListProps {
 	lclose: () => void
@@ -32,7 +34,7 @@ interface RootList {
 	list: { library: Books[] }
 }
 
-const List = (props: ListProps) => {
+const Navbar = (props: ListProps) => {
 
    const { isVisible } = useClose();
    const list = useSelector((state: RootList) => state.list.library);
@@ -47,30 +49,19 @@ const List = (props: ListProps) => {
    updateStorage();
 
    return (
-      <div className='container-list'>
+      <div className='container-navbar'>
          {isVisible ? null : <Close close={props.lclose} />}
          <div>
-            <h1 className='title-book'>Lista de lectura</h1>
+            <h1 className='title-menu'><IoMenu style={{ 'position': 'relative', 'left': '15px', 'top': '5px' }} size="40" /></h1>
          </div>
-         {list.length > 0 ? (
 
-            <div className='container-list-book'>
-               {list.map(state => (
-                  <div className='image-book' key={state.book.ISBN}>
-                     <div
-                        className='button'
-                        onClick={handleImageClick(state.book.ISBN)}>x</div>
-                     <a href={state.book.link}><img
-                        width="150px"
-                        height="200px"
-                        src={state.book.cover}
-                        alt={`Portada de ${state.book.title}`} /></a>
-                  </div>))}
-            </div>
-
-         ) : (
-            <div className='default-text-list'><p>La lista de lectura está vacía</p></div>)}
+         <div className='container-list-book'>
+            <Link to='/home'><p>Home</p></Link>
+            <Link to='/home'><p>Lista de lectura</p></Link>
+            <Link to='/home'><p>Perfil</p></Link>
+            <Link to='/home'><p>Cerrar sesion</p></Link>
+         </div>
       </div>
    );
 };
-export default List;
+export default Navbar;

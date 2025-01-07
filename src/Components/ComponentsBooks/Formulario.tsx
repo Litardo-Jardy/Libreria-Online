@@ -13,8 +13,13 @@ const useFormulario = (props: propsForm) => {
    const generos = [
       'Todos',
       'Terror',
-      'Ciencia ficción',
-      'Filosofia',
+      'Ficción',
+      'Ensayos',
+      'Novela',
+      'Poesia',
+      'Comedia',
+      'Cuento',
+      'Manga',
       'Fantasia'];
 
    const [genero, setGenero] = useState<string>('Todos');

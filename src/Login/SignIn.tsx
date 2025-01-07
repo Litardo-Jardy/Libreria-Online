@@ -34,7 +34,6 @@ const SignUp = () => {
       color: '#B94A48'
    });
 
-
    const handleChange = () => {
       if (pass != '') {
          if (pass == verify) {
