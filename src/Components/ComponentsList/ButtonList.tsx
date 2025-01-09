@@ -30,7 +30,7 @@ interface RootList {
 	list: { library: Books[] }
 }
 
-const Button = (props: ButtonProps) => {
+const ButtonList = (props: ButtonProps) => {
 
    const books = useSelector((state: RootList) => state.list.library);
 
@@ -41,4 +41,4 @@ const Button = (props: ButtonProps) => {
       </div>
    );
 };
-export default Button;
+export default ButtonList;

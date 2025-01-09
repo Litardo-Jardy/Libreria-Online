@@ -1,6 +1,6 @@
 import '../Styles/App.css';
 import Books from './Books';
-import Button from '../Components/ComponentsList/ButtonList';
+import ButtonList from '../Components/ComponentsList/ButtonList';
 import useClose from '../Components/ComponentsList/HandleButtonClose';
 import Navbar from './Navbar';
 
@@ -9,7 +9,7 @@ const Home = () => {
 
    return (
       <div className="container-general">
-         {isVisible ? <Navbar lclose={handleIconClick()} /> : <Button show={handleIconClick()} />}
+         {isVisible ? <Navbar lclose={handleIconClick()} /> : <ButtonList show={handleIconClick()} />}
          <Books />
       </div>
    );

@@ -7,6 +7,11 @@ import useStorage from '../Features/Books/LocalStorage';
 import { IoMenu } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 
+
+import { AiOutlineHome } from 'react-icons/ai';
+import { FaBookReader, FaHome, FaHouseUser, FaLock, FaRegUser, FaUser } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
+
 interface ListProps {
 	lclose: () => void
 }
@@ -56,10 +61,10 @@ const Navbar = (props: ListProps) => {
          </div>
 
          <div className='container-list-book'>
-            <Link to='/home'><p>Home</p></Link>
-            <Link to='/home'><p>Lista de lectura</p></Link>
-            <Link to='/home'><p>Perfil</p></Link>
-            <Link to='/home'><p>Cerrar sesion</p></Link>
+            <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaHome /> - Home</p></NavLink>
+            <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaBookReader /> - Lista de lectura</p></NavLink>
+            <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaUser /> - Perfil</p></NavLink>
+            <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaLock /> - Cerrar sesion</p></NavLink>
          </div>
       </div>
    );

@@ -1,4 +1,5 @@
 import { useNavigate, useParams } from 'react-router-dom';
+import ButtonList from '../Components/ComponentsList/ButtonList';
 import useFormulario from '../Components/ComponentsBooks/Formulario';
 import data from '../Features/Books/data.json';
 import { Button } from 'antd';
@@ -15,6 +16,8 @@ import Share from '../Components/ComponentsBooks/ShareBooks';
 import { useEffect, useState } from 'react';
 import useAlert from '../Components/ComponentsBooks/Alert';
 import { toast } from 'react-toastify';
+import Navbar from './Navbar';
+import useClose from '../Components/ComponentsList/HandleButtonClose';
 
 interface Book {
 	title: string,
@@ -95,6 +98,8 @@ const Book = () => {
       }
    }
 
+   const { isVisible, handleIconClick } = useClose();
+
    //const changeToUrl = () => {
    //
    //};
@@ -107,6 +112,7 @@ const Book = () => {
          'justifyContent': 'center'
       }} className="container-books">
          {formularioJSX}
+
          <div className="container-show-book">
             {ContainerToast}
             {toShow.map(element => (
