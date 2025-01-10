@@ -5,10 +5,6 @@ import Close from '../Components/ComponentsList/CloseList';
 import useClose from '../Components/ComponentsList/HandleButtonClose';
 import useStorage from '../Features/Books/LocalStorage';
 import { IoMenu } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
-
-
-import { AiOutlineHome } from 'react-icons/ai';
 import { FaBookReader, FaHome, FaHouseUser, FaLock, FaRegUser, FaUser } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
@@ -52,6 +48,9 @@ const Navbar = (props: ListProps) => {
    };
 
    updateStorage();
+   const closeSession = () => {
+      localStorage.setItem('authenticated', '0');
+   };
 
    return (
       <div className='container-navbar'>
@@ -62,9 +61,9 @@ const Navbar = (props: ListProps) => {
 
          <div className='container-list-book'>
             <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaHome /> - Home</p></NavLink>
-            <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaBookReader /> - Lista de lectura</p></NavLink>
+            <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaBookReader /> - Lista de lectura <span className='list-length'>{list.length} </span></p></NavLink>
             <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaUser /> - Perfil</p></NavLink>
-            <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaLock /> - Cerrar sesion</p></NavLink>
+            <NavLink className='link-navbar' to='/home/login'><p onClick={closeSession} className='text-link-navbar'> <FaLock /> - Cerrar sesion</p></NavLink>
          </div>
       </div>
    );

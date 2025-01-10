@@ -5,8 +5,11 @@ import Home from './Dashboard/Home';
 import SignUp from './Login/SignIn';
 import Book from './Dashboard/Book';
 import Login from './Login/login';
+import { setupInactivityHandler } from './Login/LogoutOnInactivity';
 
 const App = () => {
+
+   setupInactivityHandler();
 
    return (
       <Routes>

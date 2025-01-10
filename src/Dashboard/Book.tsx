@@ -104,6 +104,17 @@ const Book = () => {
    //
    //};
    //
+
+
+   const validation = localStorage.getItem('authenticated');
+
+   useEffect(() => {
+
+      if (validation != '1') {
+         navegite('/home/login');
+      }
+
+   }, []);
    return (
       <div style={{
          'width': '99%',

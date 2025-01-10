@@ -32,6 +32,7 @@ const Login = () => {
       const pass = localStorage.getItem('codeUser');
       if (pass == verify) {
          setStatus({ name: '*Loading...', color: 'blue' });
+         localStorage.setItem('authenticated', '1');
          navegation('/home');
       } else {
          setStatus({ name: '*The code is incorrect', color: '#B94A48' });
