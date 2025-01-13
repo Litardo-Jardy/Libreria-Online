@@ -41,6 +41,7 @@ const SignUp = () => {
             localStorage.setItem('codeUser', pass);
             clearStorage();
             dispatch(clearList());
+            localStorage.setItem('authenticated', '1');
             navegation('/home');
          } else {
             setStatus({ name: '*The codes don\'t match', color: '#B94A48' });

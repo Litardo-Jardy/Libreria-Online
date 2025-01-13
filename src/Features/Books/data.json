@@ -1,5 +1,30 @@
 {
                "library": [
+
+		 
+                  
+{
+  "book": {
+    "title": "Stanley Flat",
+    "pages": 32,
+    "genere": "Cuento",
+    "cover": "/media/image/StanlyFlat.jpeg",
+    "synopsis": "Stanley Flat es un niño común y corriente hasta que un día un accidente lo convierte en una persona completamente plana, lo que cambia por completo su vida. A lo largo de la historia, Stanley enfrenta los desafíos de vivir en un mundo diseñado para personas tridimensionales.",
+    "year": 1980,
+    "link": "/media/pdfs/Flat-Stanley-Jeff-Brown.pdf",
+    "ISBN": "978-0451504361",
+    "author": {
+      "name": "Jeff Brown",
+      "otherBooks": [
+        "Flat Stanley",
+        "Stanley y los Girasoles Gigantes",
+        "La Increíble Aventura de Stanley",
+        "Flat Stanley's Worldwide Adventures"
+      ]
+    }
+  }
+},
+
                 
                    {"book": {
                           "title": "El Extranjero",
