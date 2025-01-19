@@ -100,11 +100,9 @@ const Book = () => {
 
    const { isVisible, handleIconClick } = useClose();
 
-   //const changeToUrl = () => {
-   //
-   //};
-   //
-
+   const changeToUrl = (ISBN: string) => {
+      navegite(`/home/${ISBN}/read`);
+   };
 
    const validation = localStorage.getItem('authenticated');
 
@@ -150,7 +148,7 @@ const Book = () => {
                         <p style={{ 'fontSize': '13px', 'marginTop': '-18px' }}>{element.book.year} - {element.book.pages} paginas</p>
                         <p>{element.book.genere}</p>
                         <div className="info-show-book-button">
-                           <Button type='primary'><LuBookOpen /> Leer</Button>
+                           <Button type='primary' onClick={() => changeToUrl(element.book.ISBN)}><LuBookOpen /> Leer</Button>
                            {isList ?
                               <Button
                                  className="button-show-card"

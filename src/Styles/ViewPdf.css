@@ -1,0 +1,22 @@
+.container-general-viewpdf{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-viewpdf{
+   color: white;
+   width: 100%;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   height: 105vh}
+
+.one{
+  border-top-left-radius: 40px;
+}
+
+.two{
+  border-top-right-radius: 40px;
+}

@@ -6,6 +6,7 @@ import SignUp from './Login/SignIn';
 import Book from './Dashboard/Book';
 import Login from './Login/login';
 import { setupInactivityHandler } from './Login/LogoutOnInactivity';
+import ViewPdf from './Dashboard/ViewPdf';
 
 const App = () => {
 
@@ -18,6 +19,7 @@ const App = () => {
          <Route path="/home/login" element={<Login />} />
          <Route path="/home/register" element={<SignUp />} />
          <Route path="/home/:book" element={<Book />} />
+         <Route path="/home/:book/read" element={<ViewPdf />} />
       </Routes>
    );
 };
