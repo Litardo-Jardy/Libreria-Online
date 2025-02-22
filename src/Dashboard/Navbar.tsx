@@ -61,8 +61,7 @@ const Navbar = (props: ListProps) => {
 
          <div className='container-list-book'>
             <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaHome /> - Home</p></NavLink>
-            <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaBookReader /> - Lista de lectura <span className='list-length'>{list.length} </span></p></NavLink>
-            <NavLink className='link-navbar' to='/home'><p className='text-link-navbar'> <FaUser /> - Perfil</p></NavLink>
+            <NavLink className='link-navbar' to='/home/list'><p className='text-link-navbar'> <FaBookReader /> - Lista de lectura <span className='list-length'>{list.length} </span></p></NavLink>
             <NavLink className='link-navbar' to='/home/login'><p onClick={closeSession} className='text-link-navbar'> <FaLock /> - Cerrar sesion</p></NavLink>
          </div>
       </div>
